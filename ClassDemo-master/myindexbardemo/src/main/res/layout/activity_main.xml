@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myindexbardemo.MainActivity">
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/listview"
+        android:layout_toLeftOf="@+id/indexbar"
+        android:layout_height="match_parent"></ListView>
+    <TextView
+        android:layout_width="100dp"
+        android:id="@+id/currentindex"
+        android:textSize="50sp"
+        android:text="A"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/baclground"
+        android:layout_centerInParent="true"
+        android:layout_height="100dp" />
+    <com.example.myindexbardemo.MyIndexBar
+        android:layout_width="30dp"
+        android:background="#f00"
+        android:id="@+id/indexbar"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent"
+        android:text="Hello World!" />
+</RelativeLayout>

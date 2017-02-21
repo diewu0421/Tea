@@ -1,0 +1,4 @@
+include ':app', ':dbutils', ':annotiactiondemo', ':myannotiactiondemo', ':myhttputils', ':eventbus', ':volleydemo', ':baseadapterdemo', ':percentlayoutdemo', ':webviewdemo', ':imageloader', ':slidemenusdemo', ':DrawlayoutDemo', ':pulltorefreshdemo', ':satellitemenudemo', ':satellitemenudemo', ':myslidingmenudemo', ':huanxindemo', ':meterialdesigndemo', ':mylistviewdemo', ':listviewwithbuttondemo', ':fragmentmanager', ':myxuantingviewdemo', ':myindexbardemo', ':SwipeToDeleteDemo', ':UmengGengXin', ':okhttp', ':bluetoothdemo', ':rxandroiddemo1', ':mvpdemo', ':retrofit_rxandroid_mvp_demo'
+include ':slidelibrary'
+include ':pulltorefreshlibrary'
+include ':satellitemenu'

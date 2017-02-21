@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tea</string>
+    <string name="home">首页</string>
+    <string name="shop">商品</string>
+    <string name="order">订单</string>
+    <string name="shopCar">购物车</string>
+    <string name="me">我的</string>
+    <string name="search_hint">输入商品名称</string>
+    <string name="order_deliver">代发货确认</string>
+    <string name="order_receive">待收货确认</string>
+    <string name="order_audit">待订单审核</string>
+    <string name="order_finance">待财务审核</string>
+    <string name="order_statistics">订货统计</string>
+    <string name="return_statistics">退货统计</string>
+    <string name="collection_shop">收藏商品</string>
+    <string name="order_recent">近期订货</string>
+    <string name="bug_again">再次购买</string>
+    <string name="new_goods">新品上架</string>
+    <string name="hot_seller">热销商品</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.jackiechan.swipetodeletedemo.MySwipeView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeview"
+    tools:context="com.example.jackiechan.swipetodeletedemo.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/content"
+        android:background="#9f9e9e"
+        android:text="Hellosagsadfsdfsdafsddfsdafsadfsdaf World!"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:id="@+id/delete"
+        android:text="ggsadfs"
+        android:background="#f00"
+        android:textSize="30sp" />
+</com.example.jackiechan.swipetodeletedemo.MySwipeView>
