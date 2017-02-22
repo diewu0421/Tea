@@ -19,6 +19,11 @@ public class ShopCarFragment extends BaseFragment {
     }
 
     @Override
+    protected void fillData() {
+
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.shop_car_layout;
     }

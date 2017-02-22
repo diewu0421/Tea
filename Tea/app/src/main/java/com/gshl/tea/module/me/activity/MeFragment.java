@@ -19,6 +19,12 @@ public class MeFragment extends BaseFragment {
     }
 
     @Override
+    protected void fillData() {
+
+    }
+
+
+    @Override
     protected int getLayoutId() {
         return R.layout.me_layout;
     }

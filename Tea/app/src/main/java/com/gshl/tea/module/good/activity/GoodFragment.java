@@ -20,6 +20,11 @@ public class GoodFragment extends BaseFragment {
     }
 
     @Override
+    protected void fillData() {
+
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.good_layout;
     }

@@ -35,12 +35,12 @@ public abstract class BaseFragment extends Fragment {
     }
 
     //当fragment可见的时候
-    private void onInVisible() {
+    protected void onInVisible() {
 
     }
 
     //当fragment不可见的时候
-    private void onVisible() {
+    protected void onVisible() {
 
     }
 
@@ -57,11 +57,10 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(getLayoutId(), container, false);
-        binding = DataBindingUtil.bind(view);
+//        binding = DataBindingUtil.bind(view);
         isPrepared = true;
         lazyLoad();
-        init();
-        loadData();
+
         return view;
     }
 
@@ -73,14 +72,17 @@ public abstract class BaseFragment extends Fragment {
         if (!isPrepared || !isVisible) return;
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding = DataBindingUtil.bind(view);
+        init();
+        loadData();
+        fillData();
+    }
 
+    //
+    protected abstract void fillData();
 
-//    @Override
-//    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-//        fillData(view);
-//        super.onViewCreated(view, savedInstanceState);
-//    }
-//
-//    protected abstract void fillData(View view);
     protected abstract int getLayoutId();
 }

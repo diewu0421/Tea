@@ -1,10 +1,21 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
-            name="str"
+            name="marquee"
             type="String"/>
+        <!--  app:layoutManager="@{hotSellerLayoutManager}"
+                    app:adapter="@{hotSellerAdapter}"-->
+        <variable
+            name="hotSellerLayoutManager"
+            type="android.support.v7.widget.LinearLayoutManager"/>
+
+        <variable
+            name="hotSellerAdapter"
+            type="com.gshl.tea.module.home.adapter.CommonRVAdapter"/>
+
     </data>
 
     <ScrollView
@@ -45,7 +56,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
-                        android:background="@drawable/search_icon"/>
+                        app:srcCompat="@drawable/search_icon"/>
 
 
                 </RelativeLayout>
@@ -64,6 +75,7 @@
             <include layout="@layout/split_line"/>
 
             <!--notification start-->
+            <!--android:background="@drawable/notification_icon"-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -75,8 +87,9 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/notification_icon"/>
-
+                    app:srcCompat="@drawable/notification_icon"
+                    />
+                <!--跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测-->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -90,14 +103,15 @@
                     android:marqueeRepeatLimit="marquee_forever"
                     android:scrollHorizontally="true"
                     android:singleLine="true"
-                    android:text="跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测试"
+                    android:text="@{marquee}"
                     />
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/close_noti_icon"/>
+                    app:srcCompat="@drawable/close_noti_icon"
+                    android:id="@+id/imageView2"/>
 
             </LinearLayout>
             <!--notification end-->
@@ -364,6 +378,13 @@
                     android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
                     android:text="@string/hot_seller"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="@{hotSellerLayoutManager}"
+                    app:adapter="@{hotSellerAdapter}"
+                    ></android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
 

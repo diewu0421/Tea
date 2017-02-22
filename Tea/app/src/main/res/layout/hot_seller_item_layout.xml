@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="hotSeller"
+            type="com.gshl.tea.module.home.bean.HotSellerGood"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:onClick="hotSeller.onItemClick"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="102dp"
+            android:layout_height="92dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/home_hot_seller_img"
+            android:layout_centerVertical="true"
+            app:hotSellerImg="@{hotSeller.goodImgUrl}"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_hot_seller_title"
+            android:text="@{hotSeller.title}"
+            android:layout_toRightOf="@id/home_hot_seller_img"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:layout_alignTop="@id/home_hot_seller_img"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_hot_seller_price"
+            android:layout_toRightOf="@id/home_hot_seller_img"
+            android:layout_alignBottom="@id/home_hot_seller_img"
+            android:layout_marginLeft="10dp"
+            android:text="@{hotSeller.price}"
+            android:textColor="@color/red"
+            android:textSize="@dimen/sp_16"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/shop_car_img"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/home_hot_seller_img"
+            android:layout_marginRight="20dp"
+
+            />
+
+        <include layout="@layout/split_line"/>
+    </RelativeLayout>
+</layout>

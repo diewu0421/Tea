@@ -18,6 +18,11 @@ public class OrderFragment extends BaseFragment {
 
     }
 
+    @Override
+    protected void fillData() {
+
+    }
+
 
     @Override
     protected int getLayoutId() {
