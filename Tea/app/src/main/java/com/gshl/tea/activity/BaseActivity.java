@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.gshl.tea.R;
+import com.gshl.tea.utils.StatusBarCompat;
+
 /**
  * Created by ZengLingWen on 2017/2/21.
  */
@@ -19,9 +22,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(getLayoutId());
         binding = DataBindingUtil.setContentView(this, getLayoutId());
+        setStatusColor();
         initEvent();
         init();
         loadData();
+    }
+
+    private void setStatusColor() {
+        StatusBarCompat.compat(this,getResources().getColor(R.color.color_ff6243));
     }
 
     protected void initEvent() {

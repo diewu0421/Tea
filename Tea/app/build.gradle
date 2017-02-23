@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//        使svg图片支持5.0以下  背景使用的时候用app:srcCompat="@mipmap/xxx"
         vectorDrawables.useSupportLibrary = true
         buildConfigField "boolean", "ENABLE_ANALYTICS", "true"
     }

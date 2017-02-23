@@ -17,4 +17,11 @@
     <string name="bug_again">再次购买</string>
     <string name="new_goods">新品上架</string>
     <string name="hot_seller">热销商品</string>
+
+    <string name="week">周</string>
+
+    <string name="month">月</string>
+    <string name="year">年</string>
+
+
 </resources>

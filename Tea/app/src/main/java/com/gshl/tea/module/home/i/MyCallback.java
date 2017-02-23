@@ -15,8 +15,6 @@ public class MyCallback extends Callback<HotSellerGood>{
 
     @Override
     public HotSellerGood parseNetworkResponse(Response response, int id) throws Exception {
-//        Headers headers = response.headers();
-//        Log.e("result", headers.size() + "    \n" + headers.toString());
         String result = response.body().string();
         HotSellerGood hotSellerGood = new Gson().fromJson(result, HotSellerGood.class);
         return hotSellerGood;

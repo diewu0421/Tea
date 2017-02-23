@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--只要左边框 宽度为6边框-->
+    <item>
+        <shape>
+            <padding
+                android:bottom="-6dp"
+                android:left="0dp"
+                android:right="-6dp"
+                android:top="-6dp" />
+
+            <solid android:color="#00ff00ff" />
+        </shape>
+    </item>
+
+
+    <item>
+        <shape>
+
+            <corners android:radius="0dp" />
+            <size android:height="18dp" android:width="6dp"/>
+            <stroke
+                android:width="6dp"
+                android:color="@color/border_left_color" />
+        </shape>
+    </item>
+
+</layer-list>

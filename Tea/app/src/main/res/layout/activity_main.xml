@@ -13,13 +13,13 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+                android:layout_height="15dp"
             android:background="@color/split_line_color"/>
 
         <RadioGroup
             android:id="@+id/radio_group"
             android:layout_width="match_parent"
-            android:layout_height="53dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingBottom="5dp">
 
@@ -30,11 +30,11 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:checked="true"
-                android:drawableTop="@drawable/index"
                 android:gravity="center"
                 android:text="@string/home"
+                android:textSize="@dimen/sp_12"
+                android:drawableTop="@mipmap/btn_home_h"
                 android:textColor="@color/radio_text_color"
-                android:textSize="@dimen/sp_16"
                 />
 
             <RadioButton
@@ -43,11 +43,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/good_img"
+                android:drawableTop="@mipmap/btn_shangpin"
                 android:gravity="center"
                 android:text="@string/shop"
                 android:textColor="@color/radio_text_color"
-                android:textSize="@dimen/sp_16"
+                android:textSize="@dimen/sp_12"
                 />
 
             <RadioButton
@@ -56,11 +56,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/order_img"
+                android:drawableTop="@mipmap/btn_dingdan"
                 android:gravity="center"
                 android:text="@string/order"
                 android:textColor="@color/radio_text_color"
-                android:textSize="@dimen/sp_16"
+                android:textSize="@dimen/sp_12"
                 />
 
             <RadioButton
@@ -69,11 +69,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/shop_car_img"
+                android:drawableTop="@mipmap/btn_cart"
                 android:gravity="center"
                 android:text="@string/shopCar"
                 android:textColor="@color/radio_text_color"
-                android:textSize="@dimen/sp_16"
+                android:textSize="@dimen/sp_12"
                 />
 
             <RadioButton
@@ -82,11 +82,11 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/me_img"
+                android:drawableTop="@mipmap/btn_user"
                 android:gravity="center"
                 android:text="@string/me"
                 android:textColor="@color/radio_text_color"
-                android:textSize="@dimen/sp_16"
+                android:textSize="@dimen/sp_12"
                 />
 
         </RadioGroup>

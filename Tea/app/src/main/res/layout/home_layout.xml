@@ -16,25 +16,35 @@
             name="hotSellerAdapter"
             type="com.gshl.tea.module.home.adapter.CommonRVAdapter"/>
 
+        <variable
+            name="dbUtils"
+            type="com.gshl.tea.module.home.utils.DBUtils"/>
+
     </data>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+
+            >
 
             <!--top start-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
+                android:layout_height="44dp"
+                android:background="@color/color_ff6243"
+                android:orientation="horizontal"
+                >
 
                 <RelativeLayout
                     android:layout_width="0dp"
-                    android:layout_height="30dp"
+                    android:layout_height="31dp"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
@@ -47,48 +57,46 @@
                         android:focusable="false"
                         android:hint="@string/search_hint"
                         android:paddingLeft="@dimen/search_indent"
-                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/color_bdbdbd"
+                        android:textSize="@dimen/sp_15"
                         />
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="11dp"
+                        android:layout_height="11dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
-                        app:srcCompat="@drawable/search_icon"/>
+                        app:srcCompat="@mipmap/bar_search"/>
 
 
                 </RelativeLayout>
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
+                <com.gshl.tea.module.home.widgets.MessageView
+                    android:layout_width="21dp"
+                    android:layout_height="26dp"
                     android:layout_gravity="center_vertical"
-                    android:drawableTop="@drawable/message_icon"
-                    android:gravity="center"
-                    android:text="消息"
-                    android:textSize="@dimen/sp_16"/>
+                    android:layout_marginRight="10dp"
+                    />
             </LinearLayout>
             <!--top end-->
 
             <include layout="@layout/split_line"/>
 
             <!--notification start-->
-            <!--android:background="@drawable/notification_icon"-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:background="@drawable/border_bottom"
                 android:orientation="horizontal"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="18dp"
+                    android:layout_height="21dp"
                     android:layout_gravity="center_vertical"
-                    app:srcCompat="@drawable/notification_icon"
-                    />
+                    android:background="@mipmap/btn_laba"/>
                 <!--跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测试跑马灯效果测-->
                 <TextView
                     android:layout_width="0dp"
@@ -104,14 +112,16 @@
                     android:scrollHorizontally="true"
                     android:singleLine="true"
                     android:text="@{marquee}"
+                    android:textColor="@color/color_7f7f7f"
+                    android:textSize="@dimen/sp_14"
                     />
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:id="@+id/imageView2"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
                     android:layout_gravity="center_vertical"
-                    app:srcCompat="@drawable/close_noti_icon"
-                    android:id="@+id/imageView2"/>
+                    android:background="@mipmap/btn_close_s"/>
 
             </LinearLayout>
             <!--notification end-->
@@ -119,119 +129,174 @@
             <!--order info start-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:background="@drawable/border_top_bottom"
+                android:layout_height="63dp"
                 android:orientation="horizontal">
 
-                <LinearLayout
+                <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:background="@color/color_e7e7e7"/>-->
+
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/border_right"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_weight="1">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
-                        android:textColor="@color/black"
-                        android:textSize="50sp"/>
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="6"
+                        android:textColor="@color/color_ff6243"
+                        android:textSize="25dp"
+
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
                         android:text="@string/order_audit"
-                        android:textColor="@color/gray"
+                        android:textColor="@color/color_4c4c4c"
                         android:textSize="@dimen/sp_14"
-                        />
-                </LinearLayout>
 
-                <LinearLayout
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/color_e7e7e7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/border_right"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_weight="1">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
                         android:text="2"
-                        android:textColor="@color/black"
-                        android:textSize="50sp"/>
+                        android:textColor="@color/color_ff6243"
+                        android:textSize="25dp"
+
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
                         android:text="@string/order_finance"
+                        android:textColor="@color/color_4c4c4c"
                         android:textSize="@dimen/sp_14"
-                        android:textColor="@color/gray"
-                        />
-                </LinearLayout>
 
-                <LinearLayout
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/color_e7e7e7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/border_right"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_weight="1">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3"
-                        android:textColor="@color/black"
-                        android:textSize="50sp"/>
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="1"
+                        android:textColor="@color/color_ff6243"
+                        android:textSize="25dp"
+
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
                         android:text="@string/order_deliver"
+                        android:textColor="@color/color_4c4c4c"
                         android:textSize="@dimen/sp_14"
-                        android:textColor="@color/gray"
-                        />
-                </LinearLayout>
 
-                <LinearLayout
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/color_e7e7e7"/>
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_weight="1">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4"
-                        android:textColor="@color/black"
-                        android:textSize="50sp"/>
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="12"
+                        android:textColor="@color/color_ff6243"
+                        android:textSize="25dp"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/order_receive"
-                        android:textSize="@dimen/sp_14"
-                        android:textColor="@color/gray"
                         />
-                </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/order_receive"
+                        android:textColor="@color/color_4c4c4c"
+                        android:textSize="@dimen/sp_14"
+
+                        />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/color_e7e7e7"/>
+                </RelativeLayout>
+
             </LinearLayout>
             <!--order info end-->
 
             <!--chart-toggle start-->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:background="@drawable/border_bottom"
-                android:layout_height="50dp">
+                android:layout_height="40dp"
+                android:background="@drawable/border_bottom">
+
                 <RadioGroup
                     android:id="@+id/icon_toggle_radio_group"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
                     android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     >
 
                     <RadioButton
@@ -243,8 +308,8 @@
                         android:checked="true"
                         android:gravity="center"
                         android:text="@string/order_statistics"
-                        android:textColor="@color/radio_text_color"
-                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/time_radio_text_color"
+                        android:textSize="@dimen/sp_15"
                         />
 
                     <RadioButton
@@ -255,56 +320,102 @@
                         android:button="@null"
                         android:gravity="center"
                         android:text="@string/return_statistics"
-                        android:textColor="@color/radio_text_color"
-                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/time_radio_text_color"
+                        android:textSize="@dimen/sp_15"
                         />
                 </RadioGroup>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="最近十周"
-                    android:layout_centerVertical="true"
+
+                <RadioGroup
+                    android:id="@+id/icon_toggle_time_radio_group"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="10dp"
-                    android:textSize="@dimen/sp_16"
-                    android:textColor="@color/black"
-                    />
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <RadioButton
+                        android:id="@+id/radio_group_week"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="@string/week"
+                        android:textColor="@color/time_radio_text_color"
+                        android:textSize="@dimen/sp_15"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_group_month"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/month"
+                        android:textColor="@color/time_radio_text_color"
+                        android:textSize="@dimen/sp_15"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/radio_group_year"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/year"
+                        android:textColor="@color/time_radio_text_color"
+                        android:textSize="@dimen/sp_15"
+                        />
+                </RadioGroup>
+
             </RelativeLayout>
             <!--chart-toggle end-->
 
             <!--chart start -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:background="@drawable/border_bottom"
-                android:paddingTop="3dp"
+                android:layout_height="200dp"
                 android:paddingBottom="3dp"
-                android:layout_height="200dp">
+                android:paddingTop="3dp">
                 <!--暂时弄一张图片占位-->
                 <ImageView
+                    android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@mipmap/u642"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_marginBottom="20dp"
-                    android:id="@+id/imageView"/>
+                    android:background="@mipmap/u642"/>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/split_line_color"/>
             </RelativeLayout>
             <!--chart end-->
 
             <!--nav start-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:paddingTop="5dp"
-                android:background="@drawable/border_bottom"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                >
+
                 <RadioGroup
                     android:id="@+id/radio_group"
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingBottom="5dp">
@@ -316,11 +427,11 @@
                         android:layout_weight="1"
                         android:button="@null"
                         android:checked="true"
-                        android:drawableTop="@mipmap/u586"
+                        android:drawableTop="@mipmap/btn_collect"
                         android:gravity="center"
                         android:text="@string/collection_shop"
-                        android:textColor="@color/radio_text_color"
-                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/color_4c4c4c"
+                        android:textSize="@dimen/sp_14"
                         />
 
                     <RadioButton
@@ -329,11 +440,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:button="@null"
-                        android:drawableTop="@mipmap/u586"
+                        android:drawableTop="@mipmap/btn_dinghuo"
                         android:gravity="center"
                         android:text="@string/order_recent"
-                        android:textColor="@color/radio_text_color"
-                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/color_4c4c4c"
+                        android:textSize="@dimen/sp_14"
                         />
 
                     <RadioButton
@@ -342,11 +453,11 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:button="@null"
-                        android:drawableTop="@mipmap/u586"
+                        android:drawableTop="@mipmap/btn_cart1"
                         android:gravity="center"
                         android:text="@string/bug_again"
-                        android:textColor="@color/radio_text_color"
-                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/color_4c4c4c"
+                        android:textSize="@dimen/sp_14"
                         />
 
                     <RadioButton
@@ -355,36 +466,57 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:button="@null"
-                        android:drawableTop="@mipmap/u586"
+                        android:drawableTop="@mipmap/btn_gift"
                         android:gravity="center"
                         android:text="@string/new_goods"
-                        android:textColor="@color/radio_text_color"
-                        android:textSize="@dimen/sp_16"
+                        android:textColor="@color/color_4c4c4c"
+                        android:textSize="@dimen/sp_14"
                         />
 
                 </RadioGroup>
+
+
             </LinearLayout>
             <!--nav end-->
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/split_line_color"
+                />
             <!--hot seller start-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
-                    android:text="@string/hot_seller"/>
+                    android:layout_height="60dp">
 
-                <android.support.v7.widget.RecyclerView
+                    <View
+                        android:id="@+id/left_line"
+                        android:layout_width="6dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/border_left_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/left_line"
+                        android:gravity="center_vertical"
+                        android:text="@string/hot_seller"
+                        android:textSize="@dimen/sp_16"/>
+                </RelativeLayout>
+
+                <com.gshl.tea.module.home.widgets.FitHeightRecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:layoutManager="@{hotSellerLayoutManager}"
                     app:adapter="@{hotSellerAdapter}"
-                    ></android.support.v7.widget.RecyclerView>
+                    app:layoutManager="@{hotSellerLayoutManager}"
+                    ></com.gshl.tea.module.home.widgets.FitHeightRecyclerView>
 
             </LinearLayout>
 

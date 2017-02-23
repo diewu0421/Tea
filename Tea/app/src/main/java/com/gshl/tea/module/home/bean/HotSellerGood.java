@@ -3,9 +3,9 @@ package com.gshl.tea.module.home.bean;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.view.View;
+import android.widget.Toast;
 
 import com.gshl.tea.BR;
-import com.gshl.tea.utils.ShowToast;
 
 /**
  * Created by ZengLingWen on 2017/2/22.
@@ -43,6 +43,7 @@ public class HotSellerGood extends BaseObservable {
     }
 
     public void onItemClick(View view) {
-        ShowToast.showShortToast(view.getContext(), view.toString() + "  ");
+//        ShowToast.showShortToast(view.getContext(), view.toString() + "  ");
+        Toast.makeText(view.getContext(), view.toString(), Toast.LENGTH_SHORT).show();
     }
 }

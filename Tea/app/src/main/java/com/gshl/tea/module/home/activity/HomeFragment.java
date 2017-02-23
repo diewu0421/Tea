@@ -13,6 +13,7 @@ import com.gshl.tea.module.home.adapter.CommonRVAdapter;
 import com.gshl.tea.module.home.bean.Area;
 import com.gshl.tea.module.home.bean.HotSellerGood;
 import com.gshl.tea.module.home.i.MyCallback;
+import com.gshl.tea.module.home.utils.DBUtils;
 import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.util.ArrayList;
@@ -46,7 +47,8 @@ public class HomeFragment extends BaseFragment {
                 //TODO 回调方法：填充数据
                 HotSellerItemLayoutBinding itemLayoutBinding = (HotSellerItemLayoutBinding) binding;
                 itemLayoutBinding.setVariable(variableId, mDataList.get(position));
-//                itemLayoutBinding.executePendingBindings();//不调用这一句也可以
+//                itemLayoutBinding.setHotSeller(mDataList.get(position));
+                itemLayoutBinding.executePendingBindings();//不调用这一句也可以
             }
         });
 
@@ -94,7 +96,7 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected void fillData() {
         bind.setMarquee("通知跑马灯通知跑马灯通知跑马灯通知跑马灯通知跑马灯通知跑马灯通知跑马灯通知跑马灯通知跑马灯通知跑马灯通知跑马灯通知跑马灯");
-
+        bind.setDbUtils(new DBUtils());
     }
 
     private void setData(Area result) {

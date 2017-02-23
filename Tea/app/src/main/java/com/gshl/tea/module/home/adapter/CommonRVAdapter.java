@@ -36,7 +36,7 @@ public abstract class CommonRVAdapter<T> extends RecyclerView.Adapter<CommonRVAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
+//        ((HotSellerItemLayoutBinding) holder.binding).setHotSeller(mDataList.get(position));
         fillData(holder.binding,variableId,position);
     }
 
