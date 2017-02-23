@@ -15,6 +15,15 @@ public class HotSellerGood extends BaseObservable {
     private String goodImgUrl;
     private String title;
     private String price;
+    private int position;
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
     public String getGoodImgUrl() {
         return goodImgUrl;
@@ -44,6 +53,6 @@ public class HotSellerGood extends BaseObservable {
 
     public void onItemClick(View view) {
 //        ShowToast.showShortToast(view.getContext(), view.toString() + "  ");
-        Toast.makeText(view.getContext(), view.toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(view.getContext(), "这是第" + position + "个位置", Toast.LENGTH_SHORT).show();
     }
 }

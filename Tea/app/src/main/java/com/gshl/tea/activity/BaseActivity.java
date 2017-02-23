@@ -22,6 +22,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(getLayoutId());
         binding = DataBindingUtil.setContentView(this, getLayoutId());
+        //设置状态栏的颜色 沉浸式状态栏
         setStatusColor();
         initEvent();
         init();

@@ -4,6 +4,7 @@ import android.databinding.ViewDataBinding;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 
+import com.google.gson.Gson;
 import com.gshl.tea.BR;
 import com.gshl.tea.R;
 import com.gshl.tea.activity.BaseFragment;
@@ -12,14 +13,15 @@ import com.gshl.tea.databinding.HotSellerItemLayoutBinding;
 import com.gshl.tea.module.home.adapter.CommonRVAdapter;
 import com.gshl.tea.module.home.bean.Area;
 import com.gshl.tea.module.home.bean.HotSellerGood;
-import com.gshl.tea.module.home.i.MyCallback;
 import com.gshl.tea.module.home.utils.DBUtils;
 import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.Callback;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.Call;
+import okhttp3.Response;
 
 /**
  * Created by ZengLingWen on 2017/2/21.
@@ -59,6 +61,7 @@ public class HomeFragment extends BaseFragment {
             HotSellerGood hotSellerGood = new HotSellerGood();
             hotSellerGood.setGoodImgUrl("http://avatar.csdn.net/4/9/8/1_a10615.jpg");
             hotSellerGood.setPrice("￥33.00" + i);
+            hotSellerGood.setPosition(mDataList.size());
             hotSellerGood.setTitle("百草味  草莓干200g 蜜饯水果干\n果脯  干吃的零食" + i);
             mDataList.add(hotSellerGood);
 
@@ -77,18 +80,22 @@ public class HomeFragment extends BaseFragment {
                 .addParams("showapi_appid", 32417+"")
                 .addParams("area", "深圳")
                 .build()
-                .execute(new MyCallback(){
+                .execute(new Callback<Area>() {
                     @Override
-                    public void onResponse(HotSellerGood response, int id) {
-                        super.onResponse(response, id);
-                        Log.e("result", response.toString());
-
+                    public Area parseNetworkResponse(Response response, int id) throws Exception {
+                        String result = response.body().string();
+                        Area area = new Gson().fromJson(result, Area.class);
+                        return area;
                     }
 
                     @Override
                     public void onError(Call call, Exception e, int id) {
-                        super.onError(call, e, id);
                         Log.e("result", "error");
+                    }
+
+                    @Override
+                    public void onResponse(Area response, int id) {
+                        Log.e("result", response.toString());
                     }
                 });
     }

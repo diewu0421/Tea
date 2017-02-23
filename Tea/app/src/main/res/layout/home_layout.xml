@@ -6,8 +6,6 @@
         <variable
             name="marquee"
             type="String"/>
-        <!--  app:layoutManager="@{hotSellerLayoutManager}"
-                    app:adapter="@{hotSellerAdapter}"-->
         <variable
             name="hotSellerLayoutManager"
             type="android.support.v7.widget.LinearLayoutManager"/>
