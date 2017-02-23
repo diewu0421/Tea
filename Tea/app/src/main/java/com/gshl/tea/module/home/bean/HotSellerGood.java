@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.gshl.tea.BR;
+import com.gshl.tea.utils.ShowToast;
 
 /**
  * Created by ZengLingWen on 2017/2/22.
@@ -54,5 +55,10 @@ public class HotSellerGood extends BaseObservable {
     public void onItemClick(View view) {
 //        ShowToast.showShortToast(view.getContext(), view.toString() + "  ");
         Toast.makeText(view.getContext(), "这是第" + position + "个位置", Toast.LENGTH_SHORT).show();
+    }
+
+
+    public void onShopCarClick(View view) {
+        ShowToast.showShortToast(view.getContext(),"购物车被点击了 " + position);
     }
 }

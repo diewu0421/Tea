@@ -103,6 +103,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignBottom="@id/home_hot_seller_img"
             android:layout_marginRight="20dp"
+            android:onClick="@{hotSeller.onShopCarClick}"
 
             />
 
