@@ -1,4 +1,4 @@
-package com.gshl.tea.module.home.adapter;
+package com.gshl.tea.adapter;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
@@ -13,7 +13,7 @@ import java.util.List;
  * Created by ZengLingWen on 2017/2/22.
  */
 
-public abstract class CommonRVAdapter<T> extends RecyclerView.Adapter<CommonRVAdapter<T>.ViewHolder>{
+public class CommonRVAdapter<T> extends RecyclerView.Adapter<CommonRVAdapter<T>.ViewHolder>{
 
 //    private Context
     private List<T> mDataList;
@@ -37,7 +37,9 @@ public abstract class CommonRVAdapter<T> extends RecyclerView.Adapter<CommonRVAd
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 //        ((HotSellerItemLayoutBinding) holder.binding).setHotSeller(mDataList.get(position));
-        fillData(holder.binding,variableId,position);
+//        fillData(holder.binding,variableId,position);
+        holder.binding.setVariable(variableId, mDataList.get(position));
+        holder.binding.executePendingBindings();
     }
 
 
@@ -46,8 +48,7 @@ public abstract class CommonRVAdapter<T> extends RecyclerView.Adapter<CommonRVAd
         return mDataList == null ? 0 : mDataList.size();
     }
 
-
-    protected abstract void fillData(ViewDataBinding binding, int variableId, int position);
+//    protected abstract void fillData(ViewDataBinding binding, int variableId, int position);
 
     class ViewHolder extends RecyclerView.ViewHolder {
         ViewDataBinding binding;

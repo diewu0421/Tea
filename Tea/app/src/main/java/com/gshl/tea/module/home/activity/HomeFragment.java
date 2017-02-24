@@ -8,9 +8,8 @@ import com.google.gson.Gson;
 import com.gshl.tea.BR;
 import com.gshl.tea.R;
 import com.gshl.tea.activity.BaseFragment;
+import com.gshl.tea.adapter.CommonRVAdapter;
 import com.gshl.tea.databinding.HomeLayoutBinding;
-import com.gshl.tea.databinding.HotSellerItemLayoutBinding;
-import com.gshl.tea.module.home.adapter.CommonRVAdapter;
 import com.gshl.tea.module.home.bean.Area;
 import com.gshl.tea.module.home.bean.HotSellerGood;
 import com.gshl.tea.module.home.utils.DBUtils;
@@ -43,16 +42,7 @@ public class HomeFragment extends BaseFragment {
         //给RecyclerView设置布局管理器 这是设置为线性的布局管理器
         bind.setHotSellerLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL,false));
         //给RecyclerView设置适配器
-        bind.setHotSellerAdapter(new CommonRVAdapter<HotSellerGood>(mDataList, R.layout.hot_seller_item_layout, BR.hotSeller) {
-            @Override
-            protected void fillData(ViewDataBinding binding, int variableId, int position) {
-                //TODO 回调方法：填充数据
-                HotSellerItemLayoutBinding itemLayoutBinding = (HotSellerItemLayoutBinding) binding;
-                itemLayoutBinding.setVariable(variableId, mDataList.get(position));
-//                itemLayoutBinding.setHotSeller(mDataList.get(position));
-                itemLayoutBinding.executePendingBindings();//不调用这一句也可以
-            }
-        });
+        bind.setHotSellerAdapter(new CommonRVAdapter<HotSellerGood>(mDataList, R.layout.hot_seller_item_layout, BR.hotSeller));
 
     }
 

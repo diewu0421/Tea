@@ -66,7 +66,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract void init();
 
-    protected abstract void loadData();
+    protected void loadData(){}
 
     private void lazyLoad() {
         if (!isPrepared || !isVisible) return;
@@ -82,7 +82,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     //
-    protected abstract void fillData();
+    protected void fillData(){}
 
     protected abstract int getLayoutId();
 }

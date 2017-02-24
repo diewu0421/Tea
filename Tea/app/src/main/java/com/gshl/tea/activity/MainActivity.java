@@ -1,11 +1,8 @@
 package com.gshl.tea.activity;
 
-import android.app.Activity;
-import android.os.Build;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.RadioGroup;
 
 import com.gshl.tea.R;
@@ -14,7 +11,6 @@ import com.gshl.tea.module.home.activity.HomeFragment;
 import com.gshl.tea.module.me.activity.MeFragment;
 import com.gshl.tea.module.order.activity.OrderFragment;
 import com.gshl.tea.module.shopCar.activity.ShopCarFragment;
-import com.gshl.tea.utils.StatusBarCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,43 +54,24 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    private void setStatusColor() {
-    }
-
     @Override
     protected void initEvent() {
         ((RadioGroup) findViewById(R.id.radio_group)).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int id) {
                 toggleFragment(getIndex(id));
-
             }
         });
     }
-    public static void setWindowStatusBarColor(Activity activity, int colorResId) {
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                Window window = activity.getWindow();
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.setStatusBarColor(activity.getResources().getColor(colorResId));
 
-                //底部导航栏
-                //window.setNavigationBarColor(activity.getResources().getColor(colorResId));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-    private void toggleFragment(int index) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+    private void toggleFragment(final int index) {
         if (index != lastIndex) {
+            final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.hide(fragments.get(lastIndex));
             transaction.show(fragments.get(index));
             lastIndex = index;
+            transaction.commit();
         }
-        transaction.commit();
     }
 
     private int getIndex(int id) {

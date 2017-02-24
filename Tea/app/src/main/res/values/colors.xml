@@ -26,4 +26,19 @@
 
     <color name="border_left_color">#FF3B8D</color>
 
+    <color name="good_bg">#F4F4F4</color>
+    <color name="login_input_bg">#F59471</color>
+    <color name="login_edit_hint_color">#F7C8B6</color>
+
+    <color name="bg_login_color">#F38256</color>
+    <color name="login_btn_color">#F25840</color>
+
+    <color name="register_activity_bg">#E5E5E5</color>
+    <color name="bg_color_f4f4f4">#F4F4F4</color>
+
+    <color name="next_step_btn_bg">#C3C3C3</color>
+
+    <color name="category_seleted_color">#F4F4F4</color>
+
+
 </resources>

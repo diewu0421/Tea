@@ -39,7 +39,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract void init();
 
-    protected abstract void loadData();
+    protected void loadData(){}
 
     protected abstract int getLayoutId();
 
