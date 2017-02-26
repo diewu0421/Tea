@@ -2,7 +2,6 @@ package com.gshl.tea.utils;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,17 +28,22 @@ public class AnimatorUtil {
         return instance;
     }
 
-    public void startRotate(final View view, String animatorName, int duration, float startValue, final float endValue, final View categoryRv, final float width) {
+    public void startRotate(final View view, String animatorName, int duration, final float startValue, final float endValue, final View categoryRv) {
         ObjectAnimator animator = ObjectAnimator.ofFloat(view, animatorName, startValue, endValue).setDuration(duration);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 float value = (float) valueAnimator.getAnimatedValue();
-                Log.e("progress", value + "");
+
                 view.setRotation(value);
                 ViewGroup.LayoutParams params = categoryRv.getLayoutParams();
-                params.width = (int) (value / endValue * width);
-//                categoryRv.
+                if (endValue != 0) {
+                    params.width = (int) (value / endValue * 150);
+                } else {
+                    params.width = (int) (value / startValue * 150);
+//                    categoryRv.setLayoutParams(params);
+                }
+                Log.e("params.width", params.width + "");
                 categoryRv.setLayoutParams(params);
             }
         });

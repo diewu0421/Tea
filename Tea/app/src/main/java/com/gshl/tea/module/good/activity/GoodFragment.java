@@ -3,6 +3,7 @@ package com.gshl.tea.module.good.activity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -14,6 +15,7 @@ import com.gshl.tea.constant.RecyclerViewProperty;
 import com.gshl.tea.databinding.GoodLayoutBinding;
 import com.gshl.tea.module.good.bean.Category;
 import com.gshl.tea.module.good.bean.Good;
+import com.gshl.tea.module.good.widgets.CustomHorizontalScrollView;
 import com.gshl.tea.utils.AnimatorUtil;
 
 import java.util.ArrayList;
@@ -23,13 +25,14 @@ import java.util.List;
  * Created by ZengLingWen on 2017/2/21.
  */
 
-public class GoodFragment extends BaseFragment implements View.OnClickListener, Category.OnItemClickListener {
+public class GoodFragment extends BaseFragment implements View.OnClickListener, Category.OnItemClickListener, CustomHorizontalScrollView.OnScrollChangeListener {
 
     private GoodLayoutBinding bind;
     private List<Good> mDataList;
     private ImageView toggle;
     private List<Category> mCategorys;
     private RecyclerView categoryRv;
+    private CustomHorizontalScrollView customScroll;
 
     @Override
     protected void init() {
@@ -62,6 +65,9 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
     private void initView() {
         toggle = (ImageView) bind.getRoot().findViewById(R.id.toggleCategory);
         categoryRv = (RecyclerView) bind.getRoot().findViewById(R.id.category_id);
+        customScroll = (CustomHorizontalScrollView) bind.getRoot().findViewById(R.id.custom_scroll);
+//        customScroll.setOnScrollChangeListener();
+        customScroll.addOnScrollChangeListener(this);
         toggle.setTag(false);
         toggle.setOnClickListener(this);
     }
@@ -90,17 +96,17 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
 
     @Override
     public void onClick(View view) {
-        startRotateAnimation(view);
-
+//        startRotateAnimation(view);
+        customScroll.toggle();
     }
 
     private void startRotateAnimation(final View view) {
         if (!(boolean) view.getTag()) {
             view.setTag(true);
-            AnimatorUtil.getInstance().startRotate(view, "rotate", 300, 0, 90,categoryRv,150);
+            AnimatorUtil.getInstance().startRotate(view, "rotate", 300, 0, 90,categoryRv);
         } else {
             view.setTag(false);
-            AnimatorUtil.getInstance().startRotate(view, "rotate", 300, 90, 0,categoryRv,0);
+            AnimatorUtil.getInstance().startRotate(view, "rotate", 300, 90, 0,categoryRv);
         }
     }
 
@@ -112,5 +118,11 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
         }
         //给指定的item设置点击效果
         mCategorys.get(position).setClick(true);
+    }
+
+    @Override
+    public void onScrollChange(int l, int t, int oldl, int oldt) {
+        Log.e("onScrollChange", l + "   " + t + "   " + oldl + "   " + oldt);
+
     }
 }

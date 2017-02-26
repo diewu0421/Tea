@@ -1,4 +1,4 @@
-package com.gshl.tea.module.home.widgets;
+package com.gshl.tea.module.good.widgets;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,35 +12,42 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.gshl.tea.R;
+import com.gshl.tea.utils.StatusBarCompat;
 
 /**
  * Created by Administrator on 2016/12/13.
  */
-public class MyScrollView extends HorizontalScrollView {
+public class CustomHorizontalScrollView extends HorizontalScrollView {
+    private int mStatusHeight;
     private float customRight;
     private Context mContext;
     private LinearLayout mLinearLayout;
     private ViewGroup mMenu, mContent;
     private int mMenuWidth, mPaddingleft;
     private int screenWidth;
+    private int screenHeight;
     private boolean isFirst = true;
     private boolean isOpen;
+    private OnScrollChangeListener listener;
+    private float old;
 
-    public MyScrollView(Context context) {
+    public CustomHorizontalScrollView(Context context) {
         this(context, null);
     }
 
-    public MyScrollView(Context context, AttributeSet attrs) {
+    public CustomHorizontalScrollView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public MyScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomHorizontalScrollView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this.mContext = context;
 
         screenWidth = mContext.getResources().getDisplayMetrics().widthPixels;
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.MyScrollView);
-        customRight = array.getDimension(R.styleable.MyScrollView_customRight, 50);
+        screenHeight = mContext.getResources().getDisplayMetrics().heightPixels;
+        mStatusHeight = StatusBarCompat.getStatusBarHeight(context);
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CustomHorizontalScrollView);
+        customRight = array.getDimension(R.styleable.CustomHorizontalScrollView_customRight, 50);
         mPaddingleft = (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP, customRight,
                 context.getResources().getDisplayMetrics());
@@ -68,12 +75,13 @@ public class MyScrollView extends HorizontalScrollView {
             case MotionEvent.ACTION_UP:
                 //scrollX 获得scrollView划动的x方向上的距离
                 int scrollX = getScrollX();
-                Log.e("onTouchEvent", scrollX + "");
-                if (scrollX > mMenuWidth / 2) {
+                Log.e("onScrollChange", "scrollX " + scrollX + "");
+                if (scrollX > mMenuWidth / 2)   {
                     //TODO 菜单栏划回去
                     Toast.makeText(mContext, "收缩菜单", Toast.LENGTH_SHORT).show();
                     smoothScrollTo(mMenuWidth, 0);
                     isOpen = false;
+
                 } else {
                     //TODO 菜单栏弹出来
                     Toast.makeText(mContext, "弹出菜单", Toast.LENGTH_SHORT).show();
@@ -105,9 +113,29 @@ public class MyScrollView extends HorizontalScrollView {
 //        ViewHelper.setAlpha(mMenu, menuAlpha);
 //        ViewHelper.setScaleX(mMenu, menuScale);
 //        ViewHelper.setScaleY(mMenu, menuScale);
+
+        ViewGroup.LayoutParams params = mContent.getChildAt(0).getLayoutParams();
+        ViewGroup.LayoutParams params1 = mContent.getChildAt(1).getLayoutParams();
+        params.width = l + screenWidth - mMenuWidth;
+        params1.width = l + screenWidth - mMenuWidth;
+        params1.height = mContent.getChildAt(1).getMeasuredHeight();
+        Log.e("onScrollChange", "params.width = "+params.width + "");
+        mContent.getChildAt(0).setLayoutParams(params);
+        mContent.getChildAt(1).setLayoutParams(params1);
+        if (listener != null) {
+            listener.onScrollChange(l,t,oldl,oldt);
+        }
         super.onScrollChanged(l, t, oldl, oldt);
     }
 
+
+    public interface OnScrollChangeListener{
+        void onScrollChange(int l, int t, int oldl, int oldt);
+    }
+
+    public void addOnScrollChangeListener(OnScrollChangeListener listener) {
+        this.listener = listener;
+    }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
