@@ -22,5 +22,19 @@
         <item name="android:typeface">sans</item>
     </style>
 
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme_ChenJinShi" parent="BaseTheme">
+
+    </style>
+
+    <style name="ThemeBackground" parent="Theme_ChenJinShi">
+        <item name="android:windowBackground">@color/color_ff6243</item>
+
+    </style>
 
 </resources>

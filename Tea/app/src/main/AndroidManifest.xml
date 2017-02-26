@@ -3,6 +3,9 @@
           package="com.gshl.tea">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 
     <application
         android:name=".MyApp"
@@ -10,10 +13,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppThemeNoBar">
-        <activity android:name=".activity.MainActivity">
+        android:theme="@style/Theme_ChenJinShi">
+        <activity android:name=".activity.MainActivity" android:theme="@style/Theme_ChenJinShi">
         </activity>
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".activity.LoginActivity" android:theme="@style/ThemeBackground">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

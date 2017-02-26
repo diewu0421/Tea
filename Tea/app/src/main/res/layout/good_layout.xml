@@ -2,9 +2,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="goodAdapter"
             type="com.gshl.tea.adapter.CommonRVAdapter"/>
+
         <variable
             name="categoryAdapter"
             type="com.gshl.tea.adapter.CommonRVAdapter"/>
@@ -16,12 +18,13 @@
         <variable
             name="rvManagerLinear"
             type="android.support.v7.widget.LinearLayoutManager"/>
+
         <variable
             name="value"
             type="int"/>
 
     </data>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,12 +39,12 @@
             >
 
             <ImageView
+                android:id="@+id/toggleCategory"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:id="@+id/toggleCategory"
                 android:background="@mipmap/btn_caidan"/>
 
             <RelativeLayout
@@ -79,17 +82,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
+
             <android.support.v7.widget.RecyclerView
-                android:layout_width="0dp"
                 android:id="@+id/category_id"
-                app:layoutManager="@{rvManagerLinear}"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 app:adapter="@{categoryAdapter}"
-                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-            
+                app:layoutManager="@{rvManagerLinear}"></android.support.v7.widget.RecyclerView>
+
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_weight="3"
                 android:layout_height="match_parent"
+                android:layout_weight="3"
                 android:orientation="vertical">
                 <!--进入全部商品 start-->
                 <RelativeLayout
@@ -113,11 +117,12 @@
                 <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
                     android:padding="15dp"
-                    app:layoutManager="@{rvManager}"
                     app:adapter="@{goodAdapter}"
-                    android:background="@color/white"></android.support.v7.widget.RecyclerView>
+                    app:layoutManager="@{rvManager}"></android.support.v7.widget.RecyclerView>
                 <!--商品列表 end-->
             </LinearLayout>
         </LinearLayout>
