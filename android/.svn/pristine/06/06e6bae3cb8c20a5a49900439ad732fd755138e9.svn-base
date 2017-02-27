@@ -1,0 +1,19 @@
+package com.android.databinding.library.baseAdapters;
+
+public class BR {
+        public static final int _all = 0;
+        public static final int category = 1;
+        public static final int categoryAdapter = 2;
+        public static final int click = 3;
+        public static final int dbUtils = 4;
+        public static final int good = 5;
+        public static final int goodAdapter = 6;
+        public static final int hotSeller = 7;
+        public static final int hotSellerAdapter = 8;
+        public static final int hotSellerLayoutManager = 9;
+        public static final int marquee = 10;
+        public static final int price = 11;
+        public static final int rvManager = 12;
+        public static final int rvManagerLinear = 13;
+        public static final int value = 14;
+}

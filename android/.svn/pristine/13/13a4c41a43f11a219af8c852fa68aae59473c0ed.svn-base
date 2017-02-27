@@ -1,0 +1,6 @@
+package android.databinding.layouts;
+
+import android.databinding.BindingBuildInfo;
+
+@BindingBuildInfo(buildId="f92aaeed-1a82-43f4-bc2f-84fbd89fc33e", modulePackage="com.gshl.tea", sdkRoot="E:\\sdk",layoutInfoDir="E:\\project\\android\\Tea\\app\\build\\intermediates\\data-binding-info\\debug",exportClassListTo="",isLibrary=false,minSdk=15,enableDebugLogs=false,printEncodedError=true)
+public class DataBindingInfo {}

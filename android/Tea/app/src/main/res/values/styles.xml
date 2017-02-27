@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeNoBar" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:typeface">sans</item>
+
+    </style>
+
+    <style name="AppThemeFullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:windowAnimationStyle">@style/Full_Screen_Animation</item>
+
+    </style>
+
+    <style name="Full_Screen_Animation" parent="AppThemeFullScreen">
+        <item name="android:activityOpenEnterAnimation">@anim/enter_anim</item>
+        <item name="android:activityCloseExitAnimation">@anim/exit_anim</item>
+        <!--<item name="android:activityCloseEnterAnimation">@anim/enter_anim</item>-->
+    </style>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme_ChenJinShi" parent="BaseTheme">
+        <!--<item name="android:activityOpenEnterAnimation">@anim/enter_anim</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/enter_anim</item>-->
+    </style>
+
+    <style name="ThemeBackground" parent="Theme_ChenJinShi">
+        <item name="android:windowBackground">@color/color_ff6243</item>
+
+    </style>
+
+</resources>

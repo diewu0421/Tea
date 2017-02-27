@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\project\\android\\Tea\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\bar_mima.png",
+        "source": "E:\\project\\android\\Tea\\app\\src\\main\\res\\mipmap-hdpi\\bar_mima.png"
+    },
+    {
+        "merged": "E:\\project\\android\\Tea\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\ic_launcher.png",
+        "source": "E:\\project\\android\\Tea\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\project\\android\\Tea\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi\\bar_ures.png",
+        "source": "E:\\project\\android\\Tea\\app\\src\\main\\res\\mipmap-hdpi\\bar_ures.png"
+    }
+]

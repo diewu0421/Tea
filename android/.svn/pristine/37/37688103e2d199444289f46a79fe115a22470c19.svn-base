@@ -1,0 +1,24 @@
+package com.gshl.tea;
+
+public class BR {
+        public static final int _all = 0;
+        public static final int category = 1;
+        public static final int categoryAdapter = 2;
+        public static final int click = 3;
+        public static final int dbUtils = 4;
+        public static final int getFocus = 5;
+        public static final int goBack = 6;
+        public static final int good = 7;
+        public static final int goodAdapter = 8;
+        public static final int history = 9;
+        public static final int historyRVAdapter = 10;
+        public static final int hotSeller = 11;
+        public static final int hotSellerAdapter = 12;
+        public static final int hotSellerLayoutManager = 13;
+        public static final int jumpToSeach = 14;
+        public static final int marquee = 15;
+        public static final int price = 16;
+        public static final int rvManager = 17;
+        public static final int rvManagerLinear = 18;
+        public static final int value = 19;
+}
