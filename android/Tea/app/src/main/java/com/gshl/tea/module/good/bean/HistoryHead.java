@@ -13,7 +13,7 @@ public class HistoryHead {
     private OnClearHistoryListener listener;
 
     public void clearHistory(View view){
-//        ShowToast.showShortToast(view.getContext(),"清空历史记录");
+        ShowToast.showShortToast(view.getContext(),"清空历史记录");
         if (listener != null) {
             listener.onClearHistory();
         }

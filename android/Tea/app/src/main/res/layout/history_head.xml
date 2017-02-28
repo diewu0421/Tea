@@ -17,7 +17,8 @@
             android:textColor="@color/color_7f7f7f"
             android:layout_centerVertical="true"
             />
-        
+
+        <!--android:onClick="@{historyHead.clearHistory}"-->
         <ImageView
             android:layout_width="23dp"
             android:layout_height="23dp"
@@ -25,7 +26,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:onClick="@{historyHead.clearHistory}"
+            android:id="@+id/clear_history"
             />
     </RelativeLayout>
 </layout>

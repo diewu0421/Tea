@@ -10,4 +10,6 @@ public interface RecyclerViewProperty {
 
     //搜索历史记录的头部数量
     int HISTORY_HEAD_COUNT = 1;
+
+    int GOOD_SPANS_DOUBLE = 2;
 }

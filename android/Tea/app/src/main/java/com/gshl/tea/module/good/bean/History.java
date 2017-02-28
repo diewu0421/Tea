@@ -11,35 +11,22 @@ import com.gshl.tea.utils.ShowToast;
  * Created by ZengLingWen on 2017/2/27.
  */
 
-public class History {
+public class History extends BaseObservable{
     private String content;
-    private OnItemClickListener listener;
 
+    @Bindable
     public String getContent() {
         return content;
     }
+
 
     public History(String content) {
         this.content = content;
     }
 
+
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public void onItemClick(View view){
-        ShowToast.showShortToast(view.getContext(),view.toString());
-        if (listener != null) {
-            listener.onItemClick(view);
-        }
-    }
-
-    public interface OnItemClickListener{
-        void onItemClick(View view);
-
-    }
-
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        this.listener = listener;
+        notifyPropertyChanged(BR.content);
     }
 }

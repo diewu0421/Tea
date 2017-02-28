@@ -40,7 +40,11 @@
     <string name="please_input_pass">请设置密码</string>
     <string name="please_input_shop_name">请输入商家名称</string>
     <string name="search_history">搜索历史</string>
-
+    <string name="clear_history">清空历史记录成功</string>
+    <string name="comprehensive">综合</string>
+    <string name="sales">销量</string>
+    <string name="filter_price">价格</string>
+    <string name="filter">筛选</string>
 
     <!--商品种类-->
     <string-array name="category">

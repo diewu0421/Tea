@@ -127,13 +127,13 @@ public class CustomHorizontalScrollView extends HorizontalScrollView {
 
 
         ViewGroup.LayoutParams params = mContent.getChildAt(0).getLayoutParams();
-        ViewGroup.LayoutParams params1 = mContent.getChildAt(1).getLayoutParams();
+        ViewGroup.LayoutParams params1 = mContent.getChildAt(2).getLayoutParams();
         params.width = l + screenWidth - mMenuWidth;
         params1.width = l + screenWidth - mMenuWidth;
-        params1.height = mContent.getChildAt(1).getMeasuredHeight();
+//        params1.height = mContent.getChildAt(1).getMeasuredHeight();
         Log.e("onScrollChange", "params.width = " + params.width + "");
         mContent.getChildAt(0).setLayoutParams(params);
-        mContent.getChildAt(1).setLayoutParams(params1);
+        mContent.getChildAt(2).setLayoutParams(params1);
         if (listener != null) {
             listener.onScrollChange(isDragByUser, l, t, oldl, oldt);
         }
