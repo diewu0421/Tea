@@ -1,0 +1,160 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="hideRvManager"
+            type="android.support.v7.widget.GridLayoutManager"/>
+
+        <variable
+            name="normalRvAdapter"
+            type="com.gshl.tea.adapter.CommonRVAdapter"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:id="@+id/order_container"
+        >
+
+        <!-- 隐藏的条件选择 开始-->
+        <LinearLayout
+            android:id="@+id/filter_container"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/order_by_comprehensive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/comprehensive"
+                    android:textColor="@color/good_filter_text_color"
+                    android:textSize="@dimen/sp_14"
+                    />
+
+                <RadioButton
+                    android:id="@+id/order_by_sales"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/sales"
+                    android:textColor="@color/good_filter_text_color"
+                    android:textSize="@dimen/sp_14"
+                    />
+
+            </RadioGroup>
+            <!--按照价格排行 开始-->
+            <LinearLayout
+                android:id="@+id/order_by_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/filter_price"
+                    android:textColor="@color/color_4c4c4c"
+                    android:textSize="@dimen/sp_14"
+
+                    />
+
+                <TextView
+                    android:id="@+id/filter_arrow"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/tran_angle"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+            <!--按照价格排行 结束-->
+
+            <!--更改列表样式 开始-->
+
+            <LinearLayout
+                android:id="@+id/change_list_style"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:background="@mipmap/btn_dingdan"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/split_line_color"/>
+
+
+            </LinearLayout>
+            <!--更改列表样式 开始-->
+
+            <!--筛选 开始-->
+            <LinearLayout
+                android:id="@+id/filter"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/filter"
+                    />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@mipmap/btn_saixuan"
+
+                    />
+            </LinearLayout>
+            <!--筛选 结束-->
+
+
+        </LinearLayout>
+        <!-- 隐藏的条件选择 结束-->
+        <!--列表区域 开始-->
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:adapter="@{normalRvAdapter}"
+            app:layoutManager="@{hideRvManager}"></android.support.v7.widget.RecyclerView>
+        <!--列表区域 结束-->
+    </LinearLayout>
+</layout>

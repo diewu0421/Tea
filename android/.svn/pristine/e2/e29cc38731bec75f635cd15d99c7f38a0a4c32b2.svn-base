@@ -1,0 +1,33 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <data>
+       <variable
+           name="systemNotification"
+           type="com.gshl.tea.module.home.bean.SystemNotification"/>
+   </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="@{systemNotification.notificationTime}"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_11"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="@{systemNotification.notificationContent}"
+            android:background="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_4c4c4c"
+            />
+    </LinearLayout>
+</layout>

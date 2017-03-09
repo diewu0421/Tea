@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ThemeBackground" parent="Theme_ChenJinShi">
+        <item name="android:windowBackground">@color/color_ff6243</item>
+    </style>
+    <style name="Theme_ChenJinShi" parent="BaseTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

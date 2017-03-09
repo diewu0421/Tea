@@ -1,0 +1,52 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="rvLinearManager"
+            type="android.support.v7.widget.LinearLayoutManager"/>
+
+        <variable
+            name="rvAdapter"
+            type="com.gshl.tea.adapter.CommonRVAdapter"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+        <!--top start -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_44dp"
+            android:background="@color/color_ff6243">
+
+            <ImageView
+                android:id="@+id/noti_goback"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_5dp"
+                android:background="@mipmap/btn_fangx"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/notification"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17"
+
+                />
+        </RelativeLayout>
+        <!--top end -->
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="@{rvLinearManager}"
+            app:adapter="@{rvAdapter}"
+            ></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</layout>

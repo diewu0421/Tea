@@ -1,0 +1,42 @@
+package com.gshl.tea;
+
+public class BR {
+        public static final int _all = 0;
+        public static final int category = 1;
+        public static final int categoryAdapter = 2;
+        public static final int click = 3;
+        public static final int content = 4;
+        public static final int dbUtils = 5;
+        public static final int getFocus = 6;
+        public static final int goBack = 7;
+        public static final int good = 8;
+        public static final int goodAdapter = 9;
+        public static final int goodList = 10;
+        public static final int goodListAdapter = 11;
+        public static final int goodListManager = 12;
+        public static final int hideRvManager = 13;
+        public static final int history = 14;
+        public static final int historyHead = 15;
+        public static final int historyRVAdapter = 16;
+        public static final int hotSeller = 17;
+        public static final int hotSellerAdapter = 18;
+        public static final int hotSellerLayoutManager = 19;
+        public static final int jumpToSeach = 20;
+        public static final int marquee = 21;
+        public static final int message = 22;
+        public static final int normalGood = 23;
+        public static final int normalRvAdapter = 24;
+        public static final int notification = 25;
+        public static final int notificationDetail = 26;
+        public static final int orderAdapter = 27;
+        public static final int orderLineManager = 28;
+        public static final int orderList = 29;
+        public static final int price = 30;
+        public static final int remark = 31;
+        public static final int rvAdapter = 32;
+        public static final int rvLinearManager = 33;
+        public static final int rvManager = 34;
+        public static final int rvManagerLinear = 35;
+        public static final int systemNotification = 36;
+        public static final int value = 37;
+}

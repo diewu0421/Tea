@@ -1,0 +1,116 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="29dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:textColor="@color/color_7f7f7f"
+            android:layout_marginLeft="@dimen/margin_left_10dp"
+            android:text="@string/please_select_pay_way"
+            android:textSize="@dimen/sp_14"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:layout_height="44dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:textColor="@color/color_7f7f7f"
+                android:text="@string/pay_money"
+                android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                android:layout_width="101dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:textColor="@color/color_7f7f7f"
+                android:background="@drawable/border_radius_gray"
+                android:text="450.00"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_right_10dp"
+                android:textSize="@dimen/sp_14"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/bg_zhifubao"
+                android:id="@+id/pay_way_zhifubao"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zhifubao"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_7f7f7f"
+                android:layout_toRightOf="@id/pay_way_zhifubao"
+                android:layout_marginLeft="@dimen/margin_left_10dp"
+                android:layout_centerVertical="true"
+
+                />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/btn_quan"
+                android:layout_marginRight="@dimen/margin_right_10dp"
+
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/padding_10dp"
+            android:layout_marginTop="@dimen/margin_top_10dp"
+            android:layout_marginBottom="@dimen/margin_bottom_10dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@mipmap/bg_weix"
+                android:id="@+id/pay_way_weichat"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weichat"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_7f7f7f"
+                android:layout_toRightOf="@id/pay_way_weichat"
+                android:layout_marginLeft="@dimen/margin_left_10dp"
+                android:layout_centerVertical="true"
+
+                />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/btn_quan"
+                android:layout_marginRight="@dimen/margin_right_10dp"
+
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

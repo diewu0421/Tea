@@ -1,0 +1,177 @@
+package com.gshl.tea.databinding;
+import com.gshl.tea.R;
+import com.gshl.tea.BR;
+import android.view.View;
+public class ActivityGoodDetailBinding extends android.databinding.ViewDataBinding  {
+
+    private static final android.databinding.ViewDataBinding.IncludedLayouts sIncludes;
+    private static final android.util.SparseIntArray sViewsWithIds;
+    static {
+        sIncludes = new android.databinding.ViewDataBinding.IncludedLayouts(16);
+        sIncludes.setIncludes(1, 
+            new String[] {"good_detail_hidden_layout"},
+            new int[] {2},
+            new int[] {R.layout.good_detail_hidden_layout});
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.good_list_goback, 3);
+        sViewsWithIds.put(R.id.good_detail_banner, 4);
+        sViewsWithIds.put(R.id.good_detail_title, 5);
+        sViewsWithIds.put(R.id.good_detail_store, 6);
+        sViewsWithIds.put(R.id.good_detail_select, 7);
+        sViewsWithIds.put(R.id.good_detail_alread_select, 8);
+        sViewsWithIds.put(R.id.good_detail_select_tv, 9);
+        sViewsWithIds.put(R.id.good_detail_tablayout, 10);
+        sViewsWithIds.put(R.id.good_detail_vp, 11);
+        sViewsWithIds.put(R.id.good_detail_mengban, 12);
+        sViewsWithIds.put(R.id.collect_good_bottom_btn, 13);
+        sViewsWithIds.put(R.id.good_detail_add2_car, 14);
+        sViewsWithIds.put(R.id.good_detail_at_once_pay, 15);
+    }
+    // views
+    public final android.widget.LinearLayout collectGoodBottomBtn;
+    public final android.widget.TextView goodDetailAdd2Car;
+    public final android.widget.TextView goodDetailAlreadSelect;
+    public final android.widget.TextView goodDetailAtOncePay;
+    public final com.youth.banner.Banner goodDetailBanner;
+    public final com.gshl.tea.databinding.GoodDetailHiddenLayoutBinding goodDetailHidden;
+    public final android.widget.RelativeLayout goodDetailMengban;
+    public final android.widget.RelativeLayout goodDetailSelect;
+    public final android.widget.TextView goodDetailSelectTv;
+    public final android.widget.TextView goodDetailStore;
+    public final android.support.design.widget.TabLayout goodDetailTablayout;
+    public final android.widget.TextView goodDetailTitle;
+    public final android.support.v4.view.ViewPager goodDetailVp;
+    public final android.widget.ImageView goodListGoback;
+    private final android.widget.RelativeLayout mboundView0;
+    private final android.widget.LinearLayout mboundView1;
+    // variables
+    // values
+    // listeners
+    // Inverse Binding Event Handlers
+
+    public ActivityGoodDetailBinding(android.databinding.DataBindingComponent bindingComponent, View root) {
+        super(bindingComponent, root, 1);
+        final Object[] bindings = mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds);
+        this.collectGoodBottomBtn = (android.widget.LinearLayout) bindings[13];
+        this.goodDetailAdd2Car = (android.widget.TextView) bindings[14];
+        this.goodDetailAlreadSelect = (android.widget.TextView) bindings[8];
+        this.goodDetailAtOncePay = (android.widget.TextView) bindings[15];
+        this.goodDetailBanner = (com.youth.banner.Banner) bindings[4];
+        this.goodDetailHidden = (com.gshl.tea.databinding.GoodDetailHiddenLayoutBinding) bindings[2];
+        this.goodDetailMengban = (android.widget.RelativeLayout) bindings[12];
+        this.goodDetailSelect = (android.widget.RelativeLayout) bindings[7];
+        this.goodDetailSelectTv = (android.widget.TextView) bindings[9];
+        this.goodDetailStore = (android.widget.TextView) bindings[6];
+        this.goodDetailTablayout = (android.support.design.widget.TabLayout) bindings[10];
+        this.goodDetailTitle = (android.widget.TextView) bindings[5];
+        this.goodDetailVp = (android.support.v4.view.ViewPager) bindings[11];
+        this.goodListGoback = (android.widget.ImageView) bindings[3];
+        this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
+        this.mboundView0.setTag(null);
+        this.mboundView1 = (android.widget.LinearLayout) bindings[1];
+        this.mboundView1.setTag(null);
+        setRootTag(root);
+        // listeners
+        invalidateAll();
+    }
+
+    @Override
+    public void invalidateAll() {
+        synchronized(this) {
+                mDirtyFlags = 0x4L;
+        }
+        goodDetailHidden.invalidateAll();
+        requestRebind();
+    }
+
+    @Override
+    public boolean hasPendingBindings() {
+        synchronized(this) {
+            if (mDirtyFlags != 0) {
+                return true;
+            }
+        }
+        if (goodDetailHidden.hasPendingBindings()) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean setVariable(int variableId, Object variable) {
+        switch(variableId) {
+            case BR.goodDetailInfo :
+                return true;
+        }
+        return false;
+    }
+
+    public void setGoodDetailInfo(com.gshl.tea.bean.GoodDetailInfo goodDetailInfo) {
+        // not used, ignore
+    }
+    public com.gshl.tea.bean.GoodDetailInfo getGoodDetailInfo() {
+        return null;
+    }
+
+    @Override
+    protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
+        switch (localFieldId) {
+            case 0 :
+                return onChangeGoodDetailHi((com.gshl.tea.databinding.GoodDetailHiddenLayoutBinding) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeGoodDetailHi(com.gshl.tea.databinding.GoodDetailHiddenLayoutBinding goodDetailHidden, int fieldId) {
+        switch (fieldId) {
+            case BR._all: {
+                synchronized(this) {
+                        mDirtyFlags |= 0x1L;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    protected void executeBindings() {
+        long dirtyFlags = 0;
+        synchronized(this) {
+            dirtyFlags = mDirtyFlags;
+            mDirtyFlags = 0;
+        }
+        // batch finished
+        goodDetailHidden.executePendingBindings();
+    }
+    // Listener Stub Implementations
+    // callback impls
+    // dirty flag
+    private  long mDirtyFlags = 0xffffffffffffffffL;
+
+    public static ActivityGoodDetailBinding inflate(android.view.LayoutInflater inflater, android.view.ViewGroup root, boolean attachToRoot) {
+        return inflate(inflater, root, attachToRoot, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static ActivityGoodDetailBinding inflate(android.view.LayoutInflater inflater, android.view.ViewGroup root, boolean attachToRoot, android.databinding.DataBindingComponent bindingComponent) {
+        return android.databinding.DataBindingUtil.<ActivityGoodDetailBinding>inflate(inflater, com.gshl.tea.R.layout.activity_good_detail, root, attachToRoot, bindingComponent);
+    }
+    public static ActivityGoodDetailBinding inflate(android.view.LayoutInflater inflater) {
+        return inflate(inflater, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static ActivityGoodDetailBinding inflate(android.view.LayoutInflater inflater, android.databinding.DataBindingComponent bindingComponent) {
+        return bind(inflater.inflate(com.gshl.tea.R.layout.activity_good_detail, null, false), bindingComponent);
+    }
+    public static ActivityGoodDetailBinding bind(android.view.View view) {
+        return bind(view, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static ActivityGoodDetailBinding bind(android.view.View view, android.databinding.DataBindingComponent bindingComponent) {
+        if (!"layout/activity_good_detail_0".equals(view.getTag())) {
+            throw new RuntimeException("view tag isn't correct on view:" + view.getTag());
+        }
+        return new ActivityGoodDetailBinding(bindingComponent, view);
+    }
+    /* flag mapping
+        flag 0 (0x1L): goodDetailHidden
+        flag 1 (0x2L): goodDetailInfo
+        flag 2 (0x3L): null
+    flag mapping end*/
+    //end
+}

@@ -1,0 +1,46 @@
+package com.android.databinding.library.baseAdapters;
+
+public class BR {
+        public static final int _all = 0;
+        public static final int category = 1;
+        public static final int categoryAdapter = 2;
+        public static final int click = 3;
+        public static final int collectGood = 4;
+        public static final int content = 5;
+        public static final int dbUtils = 6;
+        public static final int getFocus = 7;
+        public static final int goBack = 8;
+        public static final int good = 9;
+        public static final int goodAdapter = 10;
+        public static final int goodDetailInfo = 11;
+        public static final int goodList = 12;
+        public static final int goodListAdapter = 13;
+        public static final int goodListManager = 14;
+        public static final int hideRvManager = 15;
+        public static final int history = 16;
+        public static final int historyHead = 17;
+        public static final int historyRVAdapter = 18;
+        public static final int hotSeller = 19;
+        public static final int hotSellerAdapter = 20;
+        public static final int hotSellerLayoutManager = 21;
+        public static final int jumpToSeach = 22;
+        public static final int marquee = 23;
+        public static final int message = 24;
+        public static final int normalGood = 25;
+        public static final int normalRvAdapter = 26;
+        public static final int notification = 27;
+        public static final int notificationDetail = 28;
+        public static final int orderAdapter = 29;
+        public static final int orderLineManager = 30;
+        public static final int orderList = 31;
+        public static final int price = 32;
+        public static final int remark = 33;
+        public static final int rvAdapter = 34;
+        public static final int rvLinearManager = 35;
+        public static final int rvManager = 36;
+        public static final int rvManagerLinear = 37;
+        public static final int shopCarInfo = 38;
+        public static final int systemNotification = 39;
+        public static final int title = 40;
+        public static final int value = 41;
+}

@@ -1,0 +1,330 @@
+
+package android.databinding;
+import com.gshl.tea.BR;
+class DataBinderMapper {
+    final static int TARGET_MIN_SDK = 15;
+    public DataBinderMapper() {
+    }
+    public android.databinding.ViewDataBinding getDataBinder(android.databinding.DataBindingComponent bindingComponent, android.view.View view, int layoutId) {
+        switch(layoutId) {
+                case com.gshl.tea.R.layout.activity_good_list:
+                    return com.gshl.tea.databinding.ActivityGoodListBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.normal_good_item:
+                    return com.gshl.tea.databinding.NormalGoodItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.system_noti_item:
+                    return com.gshl.tea.databinding.SystemNotiItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.activity_good_detail:
+                    return com.gshl.tea.databinding.ActivityGoodDetailBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.normal_good_double_item:
+                    return com.gshl.tea.databinding.NormalGoodDoubleItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.good_item_layout:
+                    return com.gshl.tea.databinding.GoodItemLayoutBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.home_layout:
+                    return com.gshl.tea.databinding.HomeLayoutBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.activity_search:
+                    return com.gshl.tea.databinding.ActivitySearchBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.activity_order_detail:
+                    return com.gshl.tea.databinding.ActivityOrderDetailBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.activity_main:
+                    return com.gshl.tea.databinding.ActivityMainBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.activity_system_notification:
+                    return com.gshl.tea.databinding.ActivitySystemNotificationBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.activity_notification:
+                    return com.gshl.tea.databinding.ActivityNotificationBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.history_item:
+                    return com.gshl.tea.databinding.HistoryItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.message_item:
+                    return com.gshl.tea.databinding.MessageItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.category_item:
+                    return com.gshl.tea.databinding.CategoryItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.good_layout:
+                    return com.gshl.tea.databinding.GoodLayoutBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.order_layout:
+                    return com.gshl.tea.databinding.OrderLayoutBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.base_layout:
+                    return com.gshl.tea.databinding.BaseLayoutBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.new_fragment_test:
+                    return com.gshl.tea.databinding.NewFragmentTestBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.shop_car_layout:
+                    return com.gshl.tea.databinding.ShopCarLayoutBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.hot_seller_item_layout:
+                    return com.gshl.tea.databinding.HotSellerItemLayoutBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.edit_remark:
+                    return com.gshl.tea.databinding.EditRemarkBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.history_head:
+                    return com.gshl.tea.databinding.HistoryHeadBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.order_fiter:
+                    return com.gshl.tea.databinding.OrderFiterBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.notification_item:
+                    return com.gshl.tea.databinding.NotificationItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.order_rv_item:
+                    return com.gshl.tea.databinding.OrderRvItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.activity_notification_detail:
+                    return com.gshl.tea.databinding.ActivityNotificationDetailBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.activity_message:
+                    return com.gshl.tea.databinding.ActivityMessageBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.me_layout:
+                    return com.gshl.tea.databinding.MeLayoutBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.good_list_item:
+                    return com.gshl.tea.databinding.GoodListItemBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.notification_head:
+                    return com.gshl.tea.databinding.NotificationHeadBinding.bind(view, bindingComponent);
+                case com.gshl.tea.R.layout.hide_order_good_layout:
+                    return com.gshl.tea.databinding.HideOrderGoodLayoutBinding.bind(view, bindingComponent);
+        }
+        return null;
+    }
+    android.databinding.ViewDataBinding getDataBinder(android.databinding.DataBindingComponent bindingComponent, android.view.View[] views, int layoutId) {
+        switch(layoutId) {
+        }
+        return null;
+    }
+    int getLayoutId(String tag) {
+        if (tag == null) {
+            return 0;
+        }
+        final int code = tag.hashCode();
+        switch(code) {
+            case 405631782: {
+                if(tag.equals("layout/activity_good_list_0")) {
+                    return com.gshl.tea.R.layout.activity_good_list;
+                }
+                break;
+            }
+            case 1636493171: {
+                if(tag.equals("layout/normal_good_item_0")) {
+                    return com.gshl.tea.R.layout.normal_good_item;
+                }
+                break;
+            }
+            case 714071906: {
+                if(tag.equals("layout/system_noti_item_0")) {
+                    return com.gshl.tea.R.layout.system_noti_item;
+                }
+                break;
+            }
+            case -1331068839: {
+                if(tag.equals("layout/activity_good_detail_0")) {
+                    return com.gshl.tea.R.layout.activity_good_detail;
+                }
+                break;
+            }
+            case -314749469: {
+                if(tag.equals("layout/normal_good_double_item_0")) {
+                    return com.gshl.tea.R.layout.normal_good_double_item;
+                }
+                break;
+            }
+            case -1280284918: {
+                if(tag.equals("layout/good_item_layout_0")) {
+                    return com.gshl.tea.R.layout.good_item_layout;
+                }
+                break;
+            }
+            case -1991747178: {
+                if(tag.equals("layout/home_layout_0")) {
+                    return com.gshl.tea.R.layout.home_layout;
+                }
+                break;
+            }
+            case 101625572: {
+                if(tag.equals("layout/activity_search_0")) {
+                    return com.gshl.tea.R.layout.activity_search;
+                }
+                break;
+            }
+            case 1509509342: {
+                if(tag.equals("layout/activity_order_detail_0")) {
+                    return com.gshl.tea.R.layout.activity_order_detail;
+                }
+                break;
+            }
+            case 423753077: {
+                if(tag.equals("layout/activity_main_0")) {
+                    return com.gshl.tea.R.layout.activity_main;
+                }
+                break;
+            }
+            case -1617276863: {
+                if(tag.equals("layout/activity_system_notification_0")) {
+                    return com.gshl.tea.R.layout.activity_system_notification;
+                }
+                break;
+            }
+            case -1754007257: {
+                if(tag.equals("layout/activity_notification_0")) {
+                    return com.gshl.tea.R.layout.activity_notification;
+                }
+                break;
+            }
+            case 31139220: {
+                if(tag.equals("layout/history_item_0")) {
+                    return com.gshl.tea.R.layout.history_item;
+                }
+                break;
+            }
+            case 1135792833: {
+                if(tag.equals("layout/message_item_0")) {
+                    return com.gshl.tea.R.layout.message_item;
+                }
+                break;
+            }
+            case -1133086848: {
+                if(tag.equals("layout/category_item_0")) {
+                    return com.gshl.tea.R.layout.category_item;
+                }
+                break;
+            }
+            case -800766088: {
+                if(tag.equals("layout/good_layout_0")) {
+                    return com.gshl.tea.R.layout.good_layout;
+                }
+                break;
+            }
+            case 2129359793: {
+                if(tag.equals("layout/order_layout_0")) {
+                    return com.gshl.tea.R.layout.order_layout;
+                }
+                break;
+            }
+            case 64706532: {
+                if(tag.equals("layout/base_layout_0")) {
+                    return com.gshl.tea.R.layout.base_layout;
+                }
+                break;
+            }
+            case -746966642: {
+                if(tag.equals("layout/new_fragment_test_0")) {
+                    return com.gshl.tea.R.layout.new_fragment_test;
+                }
+                break;
+            }
+            case -1396212886: {
+                if(tag.equals("layout/shop_car_layout_0")) {
+                    return com.gshl.tea.R.layout.shop_car_layout;
+                }
+                break;
+            }
+            case 1153780542: {
+                if(tag.equals("layout/hot_seller_item_layout_0")) {
+                    return com.gshl.tea.R.layout.hot_seller_item_layout;
+                }
+                break;
+            }
+            case -1820914783: {
+                if(tag.equals("layout/edit_remark_0")) {
+                    return com.gshl.tea.R.layout.edit_remark;
+                }
+                break;
+            }
+            case -11470559: {
+                if(tag.equals("layout/history_head_0")) {
+                    return com.gshl.tea.R.layout.history_head;
+                }
+                break;
+            }
+            case -1845630311: {
+                if(tag.equals("layout/order_fiter_0")) {
+                    return com.gshl.tea.R.layout.order_fiter;
+                }
+                break;
+            }
+            case 324915571: {
+                if(tag.equals("layout/notification_item_0")) {
+                    return com.gshl.tea.R.layout.notification_item;
+                }
+                break;
+            }
+            case -203258935: {
+                if(tag.equals("layout/order_rv_item_0")) {
+                    return com.gshl.tea.R.layout.order_rv_item;
+                }
+                break;
+            }
+            case 1294771947: {
+                if(tag.equals("layout/activity_notification_detail_0")) {
+                    return com.gshl.tea.R.layout.activity_notification_detail;
+                }
+                break;
+            }
+            case -67825715: {
+                if(tag.equals("layout/activity_message_0")) {
+                    return com.gshl.tea.R.layout.activity_message;
+                }
+                break;
+            }
+            case 1209973693: {
+                if(tag.equals("layout/me_layout_0")) {
+                    return com.gshl.tea.R.layout.me_layout;
+                }
+                break;
+            }
+            case 1088551048: {
+                if(tag.equals("layout/good_list_item_0")) {
+                    return com.gshl.tea.R.layout.good_list_item;
+                }
+                break;
+            }
+            case 282305792: {
+                if(tag.equals("layout/notification_head_0")) {
+                    return com.gshl.tea.R.layout.notification_head;
+                }
+                break;
+            }
+            case -1479478476: {
+                if(tag.equals("layout/hide_order_good_layout_0")) {
+                    return com.gshl.tea.R.layout.hide_order_good_layout;
+                }
+                break;
+            }
+        }
+        return 0;
+    }
+    String convertBrIdToString(int id) {
+        if (id < 0 || id >= InnerBrLookup.sKeys.length) {
+            return null;
+        }
+        return InnerBrLookup.sKeys[id];
+    }
+    private static class InnerBrLookup {
+        static String[] sKeys = new String[]{
+            "_all"
+            ,"category"
+            ,"categoryAdapter"
+            ,"click"
+            ,"content"
+            ,"dbUtils"
+            ,"getFocus"
+            ,"goBack"
+            ,"good"
+            ,"goodAdapter"
+            ,"goodList"
+            ,"goodListAdapter"
+            ,"goodListManager"
+            ,"hideRvManager"
+            ,"history"
+            ,"historyHead"
+            ,"historyRVAdapter"
+            ,"hotSeller"
+            ,"hotSellerAdapter"
+            ,"hotSellerLayoutManager"
+            ,"jumpToSeach"
+            ,"marquee"
+            ,"message"
+            ,"normalGood"
+            ,"normalRvAdapter"
+            ,"notification"
+            ,"notificationDetail"
+            ,"orderAdapter"
+            ,"orderLineManager"
+            ,"orderList"
+            ,"price"
+            ,"remark"
+            ,"rvAdapter"
+            ,"rvLinearManager"
+            ,"rvManager"
+            ,"rvManagerLinear"
+            ,"systemNotification"
+            ,"value"};
+    }
+}

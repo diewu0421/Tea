@@ -1,0 +1,158 @@
+package com.gshl.tea.databinding;
+import com.gshl.tea.R;
+import com.gshl.tea.BR;
+import android.view.View;
+public class MessageItemBinding extends android.databinding.ViewDataBinding  {
+
+    private static final android.databinding.ViewDataBinding.IncludedLayouts sIncludes;
+    private static final android.util.SparseIntArray sViewsWithIds;
+    static {
+        sIncludes = null;
+        sViewsWithIds = null;
+    }
+    // views
+    private final android.widget.RelativeLayout mboundView0;
+    private final android.widget.TextView mboundView2;
+    private final android.widget.TextView mboundView3;
+    private final android.widget.TextView mboundView4;
+    public final android.widget.ImageView messageIcon;
+    // variables
+    private com.gshl.tea.module.home.bean.Message mMessage;
+    // values
+    // listeners
+    // Inverse Binding Event Handlers
+
+    public MessageItemBinding(android.databinding.DataBindingComponent bindingComponent, View root) {
+        super(bindingComponent, root, 0);
+        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
+        this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
+        this.mboundView0.setTag(null);
+        this.mboundView2 = (android.widget.TextView) bindings[2];
+        this.mboundView2.setTag(null);
+        this.mboundView3 = (android.widget.TextView) bindings[3];
+        this.mboundView3.setTag(null);
+        this.mboundView4 = (android.widget.TextView) bindings[4];
+        this.mboundView4.setTag(null);
+        this.messageIcon = (android.widget.ImageView) bindings[1];
+        this.messageIcon.setTag(null);
+        setRootTag(root);
+        // listeners
+        invalidateAll();
+    }
+
+    @Override
+    public void invalidateAll() {
+        synchronized(this) {
+                mDirtyFlags = 0x2L;
+        }
+        requestRebind();
+    }
+
+    @Override
+    public boolean hasPendingBindings() {
+        synchronized(this) {
+            if (mDirtyFlags != 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean setVariable(int variableId, Object variable) {
+        switch(variableId) {
+            case BR.message :
+                setMessage((com.gshl.tea.module.home.bean.Message) variable);
+                return true;
+        }
+        return false;
+    }
+
+    public void setMessage(com.gshl.tea.module.home.bean.Message message) {
+        this.mMessage = message;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.message);
+        super.requestRebind();
+    }
+    public com.gshl.tea.module.home.bean.Message getMessage() {
+        return mMessage;
+    }
+
+    @Override
+    protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
+        switch (localFieldId) {
+        }
+        return false;
+    }
+
+    @Override
+    protected void executeBindings() {
+        long dirtyFlags = 0;
+        synchronized(this) {
+            dirtyFlags = mDirtyFlags;
+            mDirtyFlags = 0;
+        }
+        java.lang.String messageTitleMessage = null;
+        com.gshl.tea.module.home.bean.Message message = mMessage;
+        java.lang.String timeMessage = null;
+        java.lang.String messageIconMessage = null;
+        java.lang.String descriptionMessage = null;
+
+        if ((dirtyFlags & 0x3L) != 0) {
+
+
+
+                if (message != null) {
+                    // read message.messageTitle
+                    messageTitleMessage = message.getMessageTitle();
+                    // read message.time
+                    timeMessage = message.getTime();
+                    // read message.messageIcon
+                    messageIconMessage = message.getMessageIcon();
+                    // read message.description
+                    descriptionMessage = message.getDescription();
+                }
+        }
+        // batch finished
+        if ((dirtyFlags & 0x3L) != 0) {
+            // api target 1
+
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, messageTitleMessage);
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, timeMessage);
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, descriptionMessage);
+            com.gshl.tea.module.home.utils.DBUtils.loadHotSellerImg(this.messageIcon, messageIconMessage);
+        }
+    }
+    // Listener Stub Implementations
+    // callback impls
+    // dirty flag
+    private  long mDirtyFlags = 0xffffffffffffffffL;
+
+    public static MessageItemBinding inflate(android.view.LayoutInflater inflater, android.view.ViewGroup root, boolean attachToRoot) {
+        return inflate(inflater, root, attachToRoot, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static MessageItemBinding inflate(android.view.LayoutInflater inflater, android.view.ViewGroup root, boolean attachToRoot, android.databinding.DataBindingComponent bindingComponent) {
+        return android.databinding.DataBindingUtil.<MessageItemBinding>inflate(inflater, com.gshl.tea.R.layout.message_item, root, attachToRoot, bindingComponent);
+    }
+    public static MessageItemBinding inflate(android.view.LayoutInflater inflater) {
+        return inflate(inflater, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static MessageItemBinding inflate(android.view.LayoutInflater inflater, android.databinding.DataBindingComponent bindingComponent) {
+        return bind(inflater.inflate(com.gshl.tea.R.layout.message_item, null, false), bindingComponent);
+    }
+    public static MessageItemBinding bind(android.view.View view) {
+        return bind(view, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static MessageItemBinding bind(android.view.View view, android.databinding.DataBindingComponent bindingComponent) {
+        if (!"layout/message_item_0".equals(view.getTag())) {
+            throw new RuntimeException("view tag isn't correct on view:" + view.getTag());
+        }
+        return new MessageItemBinding(bindingComponent, view);
+    }
+    /* flag mapping
+        flag 0 (0x1L): message
+        flag 1 (0x2L): null
+    flag mapping end*/
+    //end
+}

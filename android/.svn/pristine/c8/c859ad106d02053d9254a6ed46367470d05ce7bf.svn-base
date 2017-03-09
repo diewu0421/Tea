@@ -1,0 +1,79 @@
+
+                                                            
+    
+
+                 
+                          
+                                                          
+           
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/margin_top_10dp"
+        android:background="?android:selectableItemBackground"
+         android:tag="layout/message_item_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:tag="binding_1"            
+            android:id="@+id/message_icon"
+            android:layout_centerVertical="true"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@id/message_icon"
+            android:layout_centerVertical="true"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_2"               
+                    android:textColor="@color/color_191919"
+                    android:textSize="@dimen/sp_15"
+                    android:layout_marginLeft="@dimen/margin_left_10dp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:tag="binding_3"       
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sp_11"
+                    android:layout_marginLeft="@dimen/margin_left_10dp"
+                    android:gravity="right"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_left_10dp"
+                android:tag="binding_4"              
+                android:textSize="@dimen/sp_13"
+                android:textColor="@color/color_4c4c4c"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/split_line_color"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+         

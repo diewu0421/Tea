@@ -1,0 +1,116 @@
+
+                                                            
+
+    
+
+                 
+                                  
+                                                                  
+
+                 
+                            
+                                                         
+
+                 
+                        
+                           
+           
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical" android:tag="layout/shop_car_layout_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <!--top start -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_44dp"
+            android:background="@color/color_ff6243">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/shop_car"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17"
+                />
+
+            <TextView
+                android:id="@+id/shop_car_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_20dp"
+                android:text="@string/edit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                />
+        </RelativeLayout>
+        <!--top end -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:tag="binding_1"               
+                                      
+            android:id="@+id/shop_car_rv"
+            ></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/shop_car_bottom_btn"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:drawableLeft="@mipmap/btn_quan"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/padding_10dp"
+                    android:text="@string/select_all"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_17"
+                    android:id="@+id/shop_car_select_all"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="合计：￥344.90"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_17"
+                    android:textColor="@color/color_333333"
+                    android:id="@+id/shop_car_price_tv"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/color_ff6243"
+                    android:gravity="center"
+                    android:text="@string/go_pay"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_17"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+         

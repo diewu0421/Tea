@@ -1,0 +1,60 @@
+package com.gshl.tea.module.home.activity;
+
+import android.support.v7.widget.LinearLayoutManager;
+
+import com.gshl.tea.R;
+import com.gshl.tea.activity.BaseActivity;
+import com.gshl.tea.adapter.CommonRVAdapter;
+import com.gshl.tea.databinding.ActivityMessageBinding;
+import com.gshl.tea.module.home.bean.Message;
+
+import java.util.List;
+
+public class MessageActivity extends BaseActivity {
+
+    private ActivityMessageBinding bind;
+    private CommonRVAdapter adapter;
+    private List<Message> mMessageLists;
+
+    @Override
+    protected void init() {
+        //初始化一些属性
+        initProperty();
+        //初始化控件
+        initView();
+        //初始化数据
+        initData();
+        //初始化adapter
+        initAdapter();
+        //初始化事件
+        initEvent();
+    }
+
+    private void initProperty() {
+        bind = (ActivityMessageBinding) this.binding;
+    }
+
+    private void initView() {
+
+    }
+
+    private void initData() {
+
+    }
+
+    private void initAdapter() {
+        bind.setRvLinearManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+//        adapter = new CommonRVAdapter(mMessageLists,,R.layout.)
+        bind.setRvAdapter(adapter);
+
+    }
+
+    private void initEvent() {
+
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_message;
+    }
+}

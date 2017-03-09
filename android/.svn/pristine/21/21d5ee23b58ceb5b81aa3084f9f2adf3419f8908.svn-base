@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">Tea</string>
+    <string name="home">首页</string>
+    <string name="shop">商品</string>
+    <string name="order">订单</string>
+    <string name="shopCar">购物车</string>
+    <string name="me">我的</string>
+    <string name="search_hint">输入商品名称</string>
+    <string name="good_search_hint">请输入商家名称</string>
+    <string name="order_deliver">代发货确认</string>
+    <string name="order_receive">待收货确认</string>
+    <string name="order_audit">待订单审核</string>
+    <string name="order_output">待出库审核</string>
+    <string name="order_finance">待财务审核</string>
+    <string name="order_statistics">订货统计</string>
+    <string name="return_statistics">退货统计</string>
+    <string name="collection_shop">收藏商品</string>
+    <string name="order_recent">近期订货</string>
+    <string name="bug_again">再次购买</string>
+    <string name="new_goods">新品上架</string>
+    <string name="hot_seller">热销商品</string>
+
+    <string name="week">周</string>
+
+    <string name="month">月</string>
+    <string name="year">年</string>
+    <string name="item_price">价格：</string>
+    <string name="goto_allShops">进入全部商品</string>
+    <string name="login">登录</string>
+    <string name="phone_register">手机快速注册</string>
+    <string name="forget_password">忘记密码?</string>
+    <string name="register">注册</string>
+    <string name="input_phone_number_hint">请输入格式正确的11位数字手机号</string>
+    <string name="agree_register">同意用户注册协议</string>
+    <string name="next_step">下一步</string>
+    <string name="input_code">输入验证码</string>
+    <string name="please_input_code">请输入验证码</string>
+    <string name="get_code">获取验证码</string>
+    <string name="input_code_hint">提示：请将密码设置为6~20位，并且有字母、数字组成！</string>
+    <string name="input_pass">输入密码</string>
+    <string name="please_input_pass">请设置密码</string>
+    <string name="please_input_shop_name">请输入商家名称</string>
+    <string name="search_history">搜索历史</string>
+    <string name="clear_history">清空历史记录成功</string>
+    <string name="comprehensive">综合</string>
+    <string name="sales">销量</string>
+    <string name="filter_price">价格</string>
+    <string name="filter">筛选</string>
+    <string name="order_code_hint">订单号/商品名称</string>
+    <string name="count">数量：</string>
+    <string name="noney">金额：</string>
+    <string name="time">时间：</string>
+    <string name="at_once_payment">立即付款</string>
+    <string name="again_buy">再次购买</string>
+    <string name="order_statu">订单状态</string>
+    <string name="pay_statu">付款状态</string>
+    <string name="section_pay">部分付款</string>
+    <string name="order_time">订单时间</string>
+    <string name="all">全部</string>
+    <string name="already_completed">已完成</string>
+    <string name="already_cancel">已取消</string>
+    <string name="stay_pay">代付款</string>
+    <string name="already_pay">已付款</string>
+    <string name="already_delete">已作废</string>
+    <string name="order_all">全部</string>
+    <string name="order_number">订单货号</string>
+    <string name="pay_time">下单时间</string>
+    <string name="urge_order">催促</string>
+    <string name="good_list">商品清单</string>
+    <string name="good_money">商品总额</string>
+    <string name="should_pay_money">应付金额</string>
+    <string name="pay_record">付款记录</string>
+    <string name="replace_pay">代付款</string>
+    <string name="pay">付款</string>
+    <string name="out_send_record">出库/发货记录</string>
+    <string name="deliver_good_date">交货日期</string>
+    <string name="receive_good_date">收货日期</string>
+    <string name="remark_info">备注信息</string>
+    <string name="order_attachment">订单附件</string>
+    <string name="invoice_info">发票信息</string>
+    <string name="operation_log">操作日志</string>
+    <string name="cancel_order">作废订单</string>
+    <string name="angin_buy">再次购买</string>
+    <string name="order_detail">订单详情</string>
+    <string name="remark">备注：</string>
+    <string name="receive_good_info">收货信息</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="message_box">消息盒子</string>
+    <string name="business_message">业务消息</string>
+    <string name="notification">通知</string>
+    <string name="title">标题</string>
+    <string name="notification_time">通知时间</string>
+    <string name="notification_detail">通知详情</string>
+    <string name="system_notification">系统通知</string>
+    <string name="good_collect">商品收藏</string>
+    <string name="edit">编辑</string>
+    <string name="complete">完成</string>
+    <string name="select_all">全选</string>
+    <string name="remove_favirites">移除收藏夹</string>
+    <string name="shop_car">购物车</string>
+    <string name="go_pay">去结算</string>
+    <string name="reduce">-</string>
+    <string name="add">+</string>
+    <string name="piece">件</string>
+    <string name="user_manager">用户管理</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="order_recode">订单记录</string>
+    <string name="manager_receive_address">管理收货地址</string>
+    <string name="my_monny">我的资产</string>
+    <string name="transaction_detail">交易明细</string>
+    <string name="advance_pay">预付款账户</string>
+    <string name="rebates_account">返点账户</string>
+    <string name="advance_account">预付款账户</string>
+    <string name="tea_coin">茶币</string>
+    <string name="after_sales_service">售后服务</string>
+    <string name="return_request">退货申请</string>
+    <string name="return_note">退货单</string>
+    <string name="company_info">公司信息</string>
+    <string name="basic_info">基本信息</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about_we">关于我们</string>
+    <string name="finance_info">财务信息</string>
+    <string name="kaipiao_info">开票信息</string>
+    <string name="exit_login">退出登录</string>
+
+    <!--商品种类-->
+    <string-array name="category">
+        <item>全部商品</item>
+        <item>茶叶</item>
+        <item>茶具</item>
+        <item>茶包装</item>
+        <item>茶点</item>
+    </string-array>
+</resources>

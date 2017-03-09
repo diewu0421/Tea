@@ -1,0 +1,240 @@
+package com.gshl.tea.databinding;
+import com.gshl.tea.R;
+import com.gshl.tea.BR;
+import android.view.View;
+public class NormalGoodItemBinding extends android.databinding.ViewDataBinding  {
+
+    private static final android.databinding.ViewDataBinding.IncludedLayouts sIncludes;
+    private static final android.util.SparseIntArray sViewsWithIds;
+    static {
+        sIncludes = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.home_hot_seller_price, 4);
+    }
+    // views
+    public final android.widget.ImageView homeHotSellerImg;
+    public final android.widget.LinearLayout homeHotSellerPrice;
+    public final android.widget.TextView homeHotSellerTitle;
+    private final android.widget.TextView mboundView3;
+    public final android.widget.RelativeLayout normalGoodSingle;
+    // variables
+    private com.gshl.tea.module.good.bean.NormalGood mNormalGood;
+    // values
+    // listeners
+    // Inverse Binding Event Handlers
+
+    public NormalGoodItemBinding(android.databinding.DataBindingComponent bindingComponent, View root) {
+        super(bindingComponent, root, 3);
+        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
+        this.homeHotSellerImg = (android.widget.ImageView) bindings[1];
+        this.homeHotSellerImg.setTag(null);
+        this.homeHotSellerPrice = (android.widget.LinearLayout) bindings[4];
+        this.homeHotSellerTitle = (android.widget.TextView) bindings[2];
+        this.homeHotSellerTitle.setTag(null);
+        this.mboundView3 = (android.widget.TextView) bindings[3];
+        this.mboundView3.setTag(null);
+        this.normalGoodSingle = (android.widget.RelativeLayout) bindings[0];
+        this.normalGoodSingle.setTag(null);
+        setRootTag(root);
+        // listeners
+        invalidateAll();
+    }
+
+    @Override
+    public void invalidateAll() {
+        synchronized(this) {
+                mDirtyFlags = 0x10L;
+        }
+        requestRebind();
+    }
+
+    @Override
+    public boolean hasPendingBindings() {
+        synchronized(this) {
+            if (mDirtyFlags != 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean setVariable(int variableId, Object variable) {
+        switch(variableId) {
+            case BR.normalGood :
+                setNormalGood((com.gshl.tea.module.good.bean.NormalGood) variable);
+                return true;
+        }
+        return false;
+    }
+
+    public void setNormalGood(com.gshl.tea.module.good.bean.NormalGood normalGood) {
+        this.mNormalGood = normalGood;
+        synchronized(this) {
+            mDirtyFlags |= 0x8L;
+        }
+        notifyPropertyChanged(BR.normalGood);
+        super.requestRebind();
+    }
+    public com.gshl.tea.module.good.bean.NormalGood getNormalGood() {
+        return mNormalGood;
+    }
+
+    @Override
+    protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
+        switch (localFieldId) {
+            case 0 :
+                return onChangeGoodImgUrlNo((android.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 1 :
+                return onChangePriceNormalG((android.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 2 :
+                return onChangeTitleNormalG((android.databinding.ObservableField<java.lang.String>) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeGoodImgUrlNo(android.databinding.ObservableField<java.lang.String> goodImgUrlNormalGood, int fieldId) {
+        switch (fieldId) {
+            case BR._all: {
+                synchronized(this) {
+                        mDirtyFlags |= 0x1L;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+    private boolean onChangePriceNormalG(android.databinding.ObservableField<java.lang.String> priceNormalGood, int fieldId) {
+        switch (fieldId) {
+            case BR._all: {
+                synchronized(this) {
+                        mDirtyFlags |= 0x2L;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+    private boolean onChangeTitleNormalG(android.databinding.ObservableField<java.lang.String> titleNormalGood, int fieldId) {
+        switch (fieldId) {
+            case BR._all: {
+                synchronized(this) {
+                        mDirtyFlags |= 0x4L;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    protected void executeBindings() {
+        long dirtyFlags = 0;
+        synchronized(this) {
+            dirtyFlags = mDirtyFlags;
+            mDirtyFlags = 0;
+        }
+        java.lang.String priceNormalGood = null;
+        java.lang.String titleNormalGood = null;
+        android.databinding.ObservableField<java.lang.String> goodImgUrlNormalGood = null;
+        android.databinding.ObservableField<java.lang.String> priceNormalGood1 = null;
+        android.databinding.ObservableField<java.lang.String> titleNormalGood1 = null;
+        java.lang.String goodImgUrlNormalGood1 = null;
+        com.gshl.tea.module.good.bean.NormalGood normalGood = mNormalGood;
+
+        if ((dirtyFlags & 0x1fL) != 0) {
+
+
+            if ((dirtyFlags & 0x19L) != 0) {
+
+                    if (normalGood != null) {
+                        // read normalGood.goodImgUrl
+                        goodImgUrlNormalGood = normalGood.goodImgUrl;
+                    }
+                    updateRegistration(0, goodImgUrlNormalGood);
+
+
+                    if (goodImgUrlNormalGood != null) {
+                        // read normalGood.goodImgUrl.get()
+                        goodImgUrlNormalGood1 = goodImgUrlNormalGood.get();
+                    }
+            }
+            if ((dirtyFlags & 0x1aL) != 0) {
+
+                    if (normalGood != null) {
+                        // read normalGood.price
+                        priceNormalGood1 = normalGood.price;
+                    }
+                    updateRegistration(1, priceNormalGood1);
+
+
+                    if (priceNormalGood1 != null) {
+                        // read normalGood.price.get()
+                        priceNormalGood = priceNormalGood1.get();
+                    }
+            }
+            if ((dirtyFlags & 0x1cL) != 0) {
+
+                    if (normalGood != null) {
+                        // read normalGood.title
+                        titleNormalGood1 = normalGood.title;
+                    }
+                    updateRegistration(2, titleNormalGood1);
+
+
+                    if (titleNormalGood1 != null) {
+                        // read normalGood.title.get()
+                        titleNormalGood = titleNormalGood1.get();
+                    }
+            }
+        }
+        // batch finished
+        if ((dirtyFlags & 0x19L) != 0) {
+            // api target 1
+
+            com.gshl.tea.module.home.utils.DBUtils.loadHotSellerImg(this.homeHotSellerImg, goodImgUrlNormalGood1);
+        }
+        if ((dirtyFlags & 0x1cL) != 0) {
+            // api target 1
+
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.homeHotSellerTitle, titleNormalGood);
+        }
+        if ((dirtyFlags & 0x1aL) != 0) {
+            // api target 1
+
+            android.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, priceNormalGood);
+        }
+    }
+    // Listener Stub Implementations
+    // callback impls
+    // dirty flag
+    private  long mDirtyFlags = 0xffffffffffffffffL;
+
+    public static NormalGoodItemBinding inflate(android.view.LayoutInflater inflater, android.view.ViewGroup root, boolean attachToRoot) {
+        return inflate(inflater, root, attachToRoot, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static NormalGoodItemBinding inflate(android.view.LayoutInflater inflater, android.view.ViewGroup root, boolean attachToRoot, android.databinding.DataBindingComponent bindingComponent) {
+        return android.databinding.DataBindingUtil.<NormalGoodItemBinding>inflate(inflater, com.gshl.tea.R.layout.normal_good_item, root, attachToRoot, bindingComponent);
+    }
+    public static NormalGoodItemBinding inflate(android.view.LayoutInflater inflater) {
+        return inflate(inflater, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static NormalGoodItemBinding inflate(android.view.LayoutInflater inflater, android.databinding.DataBindingComponent bindingComponent) {
+        return bind(inflater.inflate(com.gshl.tea.R.layout.normal_good_item, null, false), bindingComponent);
+    }
+    public static NormalGoodItemBinding bind(android.view.View view) {
+        return bind(view, android.databinding.DataBindingUtil.getDefaultComponent());
+    }
+    public static NormalGoodItemBinding bind(android.view.View view, android.databinding.DataBindingComponent bindingComponent) {
+        if (!"layout/normal_good_item_0".equals(view.getTag())) {
+            throw new RuntimeException("view tag isn't correct on view:" + view.getTag());
+        }
+        return new NormalGoodItemBinding(bindingComponent, view);
+    }
+    /* flag mapping
+        flag 0 (0x1L): normalGood.goodImgUrl
+        flag 1 (0x2L): normalGood.price
+        flag 2 (0x3L): normalGood.title
+        flag 3 (0x4L): normalGood
+        flag 4 (0x5L): null
+    flag mapping end*/
+    //end
+}

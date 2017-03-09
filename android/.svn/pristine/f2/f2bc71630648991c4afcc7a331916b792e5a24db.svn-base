@@ -1,0 +1,109 @@
+
+                                                            
+    
+
+                 
+                                  
+                                                                  
+
+                 
+                            
+                                                         
+                 
+                        
+                           
+           
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical" android:tag="layout/activity_collect_shop_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <!--top start -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_44dp"
+            android:background="@color/color_ff6243">
+
+            <ImageView
+                android:id="@+id/collect_good_goback"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_5dp"
+                android:background="@mipmap/btn_fangx"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/good_collect"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/edit"
+                android:id="@+id/collect_good_edit"
+                android:layout_marginRight="@dimen/margin_20dp"
+                />
+        </RelativeLayout>
+        <!--top end -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:tag="binding_1"               
+                                          
+                android:id="@+id/collect_good_rv"
+                android:padding="@dimen/padding_10dp"
+                ></android.support.v7.widget.RecyclerView>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:visibility="gone"
+                android:id="@+id/collect_good_bottom_btn"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp_17"
+                    android:textColor="@color/color_333333"
+                    android:text="@string/select_all"
+                    android:drawableLeft="@mipmap/btn_quan"
+                    android:gravity="left|center_vertical"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/padding_10dp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:background="@color/color_ff6243"
+                    android:textSize="@dimen/sp_17"
+                    android:text="@string/remove_favirites"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+         

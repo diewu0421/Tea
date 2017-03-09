@@ -1,0 +1,27 @@
+                                                                   
+    
+                 
+                          
+                                                          
+           
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="?android:selectableItemBackground"
+        android:orientation="vertical" android:tag="layout/history_item_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:tag="binding_1"          
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/color_4c4c4c"
+            android:layout_marginLeft="10dp"
+            />
+
+        <include layout="@layout/split_line"/>
+
+    </LinearLayout>
+         

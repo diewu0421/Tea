@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_862096e90a73d939a76bd773188d9c6a77ca2aa0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_13a04b0a89c080b2dcb59fda377691ea98ac03b5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\libs\tools.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a364ac55a9eed0c0748206354993582e03acfc1c">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\2\tools_6155ab3e67d152d6d79717e5ff459962f21039b6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a34584f0843368f0a6d0598d79426c79cdc4a916">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_a2bf4fe46c853020929c380692686cfbbd8a23ea\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_c8246c519c352e2d58c6a5dbfec5d87232229c29\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_d936ded6d759acfff4b8dbcab40f3010090bd551\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_f1d7c7382ad547e3646004041e5fc39b7b199208\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_f2504d8410067d45e245bbc49a981dc4de5cff53\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\2\nineoldandroids-2.4.0_9519c1bb82603c71e2308f0f0a158a3236b273b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\SDK\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_641b6e9427d006db85730e9b32de6e641d2eaae1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_b037a0bcd23df2a2154098fa3e5ac104cd7369aa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_869d856d14d2e103db921cf9376738d5c71f24cc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="53a143442c9833beee3210871e0f7ee17ffeb51f">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0ce032a3c8feb608076c584ae8a0f7b24c23e5d6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_b5180d14972a0378ac58efd905f52742170b3949\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_c8280438a6ce4f197e34dd0f5c22567e1ffb89ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.5.2_2428dbd5eabf65ae69bc01abd6e4b72d08e545aa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.1\19047bdb6a4fc00a44124f64ca98e88fc204e7e3\okhttp-3.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="19047bdb6a4fc00a44124f64ca98e88fc204e7e3">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.3.1_2ea39afb3973a142a4b831a99bc4e2df1de6a0a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.databinding\library\1.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="957dc30b1495f8689271e00d56ab09cc9192df02">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.databinding-library-1.2.1_e3962e9d42fdfdb004141d99ecd9833a96a196b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_508c8bd77f30db8c32d02fd9317bc96653b241ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_a147f4ea51f1e3f47856ca2513f05e3adf3a9b86\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\AS\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.2.4_083b637ac70335ceee391515f11cc4b82e44d363\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.android.databinding\baseLibrary\2.2.3\b4b51d1925cdfda98fd861230c1ecb5855500129\baseLibrary-2.2.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b4b51d1925cdfda98fd861230c1ecb5855500129">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\baseLibrary-2.2.3_7c9068a35b893ebd51276dafbfd9baac8a6ee362\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_9f4fafbfec7d66c98aba64753c9b8b93a5f740eb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.zhy\base-rvadapter\3.0.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c84446b3e55d81d6e2cb63ccccfe0868d12f9baa">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zhy-base-rvadapter-3.0.3_f882fcd1575d43e556112e26dba2ae026f96a781\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.8.0_06f7f952010e37a20e0067d81e65675288b9e24f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_ffc6d3fe79168c08239c27245ca5189a9ae57147\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_cfc1be893ea1a16c77c7a366b14d40f34ec97e60\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.zhy\okhttputils\2.6.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="155fef2600f48631a9e9665c0873743b6d24e324">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zhy-okhttputils-2.6.2_8c8d4c830c24a15ae9fa33e9c1acc66cbe3fa15d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.databinding\adapters\1.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="c56d29136c2257f63f08c29c4e739efb03b06c7d">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.databinding-adapters-1.2.1_3a395104331133a93f9b02f34f25b92beb64af86\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\project\android\Tea\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="E:\project\android\Tea\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_7b5b5af1f042ec7ddf8e9728fef701f98654a86d\classes.dex" />
+    </item>
+
+</items>

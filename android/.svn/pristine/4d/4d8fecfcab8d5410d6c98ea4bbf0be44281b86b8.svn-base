@@ -1,0 +1,46 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <!--商品详情 头部 开始-->
+        <!--top start -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_44dp"
+            >
+
+            <ImageView
+                android:id="@+id/good_list_goback"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_5dp"
+                android:background="@mipmap/btn_fangx"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="商品名称"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_17"
+                />
+            
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/btn_shouchang"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_right_10dp"
+
+                />
+        </RelativeLayout>
+        <!--top end -->
+        <!--商品详情 头部 结束-->
+    </LinearLayout>
+</layout>

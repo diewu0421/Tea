@@ -1,0 +1,288 @@
+
+                                                            
+
+    
+
+                 
+                                 
+                                                     
+           
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:tag="layout/activity_good_detail_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:scrollbars="none"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/bg_color_f4f4f4"
+                android:orientation="vertical">
+
+                <!--商品详情 头部 开始-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_44dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/good_list_goback"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left_5dp"
+                        android:background="@mipmap/btn_fangx"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="{goodDetailInfo.name}"
+                        android:textColor="@color/color_212121"
+                        android:textSize="@dimen/sp_17"
+                        />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_right_10dp"
+                        android:background="@mipmap/btn_shouchang"
+
+                        />
+                </RelativeLayout>
+                <!--商品详情 头部 结束-->
+
+                <!--商品 轮播图 开始-->
+                <com.youth.banner.Banner
+                    android:id="@+id/good_detail_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                </com.youth.banner.Banner>
+                <!--商品 轮播图 结束-->
+
+                <!--标题 价格 开始-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:id="@+id/good_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/marginleft_18dp"
+                        android:layout_marginRight="@dimen/marginleft_18dp"
+                        android:layout_marginTop="@dimen/margin_left_11dp"
+                        android:text="{goodDetailInfo.title}"
+                        android:textColor="@color/color_191919"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                    <TextView
+                        android:id="@+id/good_detail_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/good_detail_title"
+                        android:layout_marginRight="@dimen/marginleft_18dp"
+                        android:layout_marginTop="@dimen/margin_top_15dp"
+                        android:text="{goodDetailInfo.store}"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_12"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/good_detail_store"
+                        android:layout_marginTop="@dimen/margin_top_15dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/marginleft_18dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="￥"
+                                android:textColor="@color/color_f23030"
+                                android:textSize="@dimen/sp_13"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="640"
+                                android:textColor="@color/color_f23030"
+                                android:textSize="@dimen/sp_17"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="."
+                                android:textColor="@color/color_f23030"
+                                android:textSize="@dimen/sp_14"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00"
+                                android:textColor="@color/color_f23030"
+                                android:textSize="@dimen/sp_13"
+
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_bottom_10dp"
+                            android:layout_marginLeft="@dimen/margin_left_10dp"
+                            android:text="{goodDetailInfo.marketPrice}"
+
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!--标题 价格 结束 -->
+
+                <!--已选 开始-->
+                <RelativeLayout
+                    android:id="@+id/good_detail_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/height_8dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/good_detail_alread_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/marginleft_18dp"
+                        android:text="@string/already_select"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                    <TextView
+                        android:id="@+id/good_detail_select_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/marginleft_18dp"
+                        android:layout_toRightOf="@id/good_detail_alread_select"
+                        android:text="酸甜"
+                        android:textColor="@color/color_191919"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_right_5dp"
+                        android:background="@mipmap/btn_fangxiang"/>
+
+                </RelativeLayout>
+                <!--已选 结束-->
+
+                <!--商品介绍 商品附件 开始-->
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/good_detail_tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/height_8dp"
+                    android:background="@color/white">
+
+                </android.support.design.widget.TabLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/good_detail_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"></android.support.v4.view.ViewPager>
+                <!--商品介绍 商品附件 结束-->
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!--下面的透明黑色蒙版-->
+        <RelativeLayout
+            android:id="@+id/good_detail_mengban"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="#000"
+            android:visibility="invisible"
+            ></RelativeLayout>
+
+        <!--下面的商品规格选择 和 两个按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" android:tag="binding_1">
+
+
+            <!--商品的规格选择布局-->
+            <include
+                android:id="@+id/good_detail_hidden"
+                layout="@layout/good_detail_hidden_layout"
+                android:visibility="gone"/>
+
+
+            <!--下面的两个按钮-->
+            <LinearLayout
+                android:id="@+id/collect_good_bottom_btn"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/good_detail_add2_car"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/add_to_shopcar"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_17"
+                    />
+
+                <TextView
+                    android:id="@+id/good_detail_at_once_pay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/color_ff6243"
+                    android:gravity="center"
+                    android:text="@string/at_once_buy"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_17"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+         
