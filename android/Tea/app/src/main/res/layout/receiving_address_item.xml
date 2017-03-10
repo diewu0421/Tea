@@ -1,0 +1,139 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_left_10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/border_bottom"
+            android:layout_height="90dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_191919"
+                android:text="卢人甲"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/receiving_name"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_191919"
+                android:text="13541542562"
+                android:id="@+id/receiving_phonenumber"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/receiving_name"
+                android:layout_marginRight="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/color_191919"
+                android:text="广东省深圳市罗湖水贝市场1556号智汇科技园"
+                android:id="@+id/receiving_address"
+                android:layout_below="@id/receiving_name"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:background="@drawable/border_bottom_16px"
+            android:layout_height="48dp">
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:id="@+id/receiving_default"
+                android:layout_marginLeft="20dp"
+                android:background="@mipmap/btn_quan"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_ff6243"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/default_address"
+                android:layout_toRightOf="@id/receiving_default"
+                android:layout_marginLeft="5dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:background="@mipmap/btn_edit"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:background="@mipmap/btn_edit"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delete"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sp_14"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

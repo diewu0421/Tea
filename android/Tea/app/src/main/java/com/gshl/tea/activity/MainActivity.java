@@ -10,7 +10,7 @@ import com.gshl.tea.R;
 import com.gshl.tea.databinding.ActivityMainBinding;
 import com.gshl.tea.module.good.ui.fragment.GoodFragment;
 import com.gshl.tea.module.home.activity.HomeFragment;
-import com.gshl.tea.module.me.activity.MeFragment;
+import com.gshl.tea.module.me.fragment.MeFragment;
 import com.gshl.tea.module.order.ui.fragment.OrderFragment;
 import com.gshl.tea.module.shopCar.activity.ShopCarFragment;
 
@@ -80,7 +80,7 @@ public class MainActivity extends BaseActivity {
     }
 
     protected void initEvent() {
-        ((RadioGroup) findViewById(R.id.radio_group)).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bind.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int id) {
                 toggleFragment(getIndex(id));
@@ -88,7 +88,7 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    private void toggleFragment(final int index) {
+    public void toggleFragment(final int index) {
         if (index != lastIndex) {
             final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.hide(fragments.get(lastIndex));

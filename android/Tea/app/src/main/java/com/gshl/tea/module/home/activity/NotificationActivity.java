@@ -9,8 +9,7 @@ import com.gshl.tea.R;
 import com.gshl.tea.activity.BaseActivity;
 import com.gshl.tea.adapter.CommonRVAdapter;
 import com.gshl.tea.databinding.ActivityNotificationBinding;
-import com.gshl.tea.module.home.bean.Notification;
-import com.gshl.tea.module.home.bean.NotificationDetail;
+import com.gshl.tea.module.home.bean.NotificationInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,7 @@ import java.util.List;
 public class NotificationActivity extends BaseActivity implements CommonRVAdapter.OnItemClickListener, View.OnClickListener {
 
     private ActivityNotificationBinding bind;
-    private List<Notification> mNotificationLists;
+    private List<NotificationInfo> mNotificationLists;
 
     @Override
     protected void init() {
@@ -45,7 +44,7 @@ public class NotificationActivity extends BaseActivity implements CommonRVAdapte
 
     private void initData() {
         for (int i = 0; i < 10; i++) {
-            mNotificationLists.add(new Notification(
+            mNotificationLists.add(new NotificationInfo(
                     "员工请假制度已发生变更了",
                     "2017-01-17"
             ));

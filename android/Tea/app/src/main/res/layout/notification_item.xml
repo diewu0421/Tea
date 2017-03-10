@@ -3,7 +3,7 @@
 
         <variable
             name="notification"
-            type="com.gshl.tea.module.home.bean.Notification"/>
+            type="com.gshl.tea.module.home.bean.NotificationInfo"/>
     </data>
     <RelativeLayout
         android:layout_width="match_parent"

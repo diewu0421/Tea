@@ -20,13 +20,15 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:typeface">sans</item>
-        <item name="android:windowAnimationStyle">@style/Full_Screen_Animation</item>
+        <item name="android:windowAnimationStyle">@style/FullScreenAnimation</item>
     </style>
 
-    <style name="Full_Screen_Animation" parent="AppThemeFullScreen">
+    <style name="FullScreenAnimation" parent="AppThemeFullScreen">
+        <!--打开的界面的进入方式-->
         <item name="android:activityOpenEnterAnimation">@anim/enter_anim</item>
-        <item name="android:activityCloseExitAnimation">@anim/exit_anim</item>
+        <!--<item name="android:activityCloseExitAnimation">@anim/exit_anim</item>-->
         <!--<item name="android:activityCloseEnterAnimation">@anim/enter_anim</item>-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/exit_anim</item>-->
     </style>
 
     <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">

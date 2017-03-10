@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import com.gshl.tea.BR;
 import com.gshl.tea.R;
 import com.gshl.tea.activity.BaseFragment;
+import com.gshl.tea.activity.MainActivity;
 import com.gshl.tea.adapter.CommonRVAdapter;
 import com.gshl.tea.databinding.HomeLayoutBinding;
 import com.gshl.tea.module.good.ui.activity.SearchActivity;
@@ -148,12 +149,13 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                 break;
             //近期订货
             case R.id.order_recent:
-
+                ToastUtils.showShortToast(getActivity(), "收藏商品");
+                startActivity(new Intent(getActivity(), RecentOrderActivity.class));
                 break;
 
-            //再次购买
+            //再次购买  跳转到订单页面
             case R.id.buy_again:
-
+                jumpToOrderPage();
                 break;
 
             //新品上架
@@ -161,6 +163,11 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
                 break;
         }
+    }
+
+    private void jumpToOrderPage() {
+        ((MainActivity) getActivity()).bind.radioGroup.check(R.id.order);
+        ((MainActivity) getActivity()).toggleFragment(2);
     }
 
     @Override

@@ -48,6 +48,9 @@
     <color name="color_666666">#666666</color>
     <color name="color_212121">#212121</color>
     <color name="exit_login_color">#FF3B8D</color>
+    <color name="color_f3f3f3">#f3f3f3</color>
+    <color name="color_acacac">#acacac</color>
+    <color name="color_222222">#222222</color>
 
 
 </resources>

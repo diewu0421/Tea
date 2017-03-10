@@ -47,6 +47,7 @@
     <dimen name="margin_24dp">24dp</dimen>
     <dimen name="margin_40dp">40dp</dimen>
     <dimen name="margin_top_12dp">12dp</dimen>
+    <dimen name="sp_27">27sp</dimen>
 
 
 </resources>

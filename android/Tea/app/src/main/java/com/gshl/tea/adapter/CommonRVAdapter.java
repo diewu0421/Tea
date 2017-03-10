@@ -54,7 +54,6 @@ public class CommonRVAdapter extends RecyclerView.Adapter<CommonRVAdapter.BaseHo
 
         BaseHolder holder = new BaseHolder(binding.getRoot());
         holder.binding = binding;
-
         return holder;
     }
 

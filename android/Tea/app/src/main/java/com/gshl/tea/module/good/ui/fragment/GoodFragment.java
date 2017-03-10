@@ -169,8 +169,6 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
     }
 
     private void handlerResult() {
-//        bind.setHideRvManager(new GridLayoutManager(GoodFragment.this.getContext(),RecyclerViewProperty.GOOD_SPANS_SINGLE,GridLayoutManager.VERTICAL,false));
-//        bind.setNormalRvAdapter(new CommonRVAdapter(mNormalGoods, BR.normalGood,R.layout.normal_good_item));
         setNormalRvProperty();
     }
 
@@ -211,8 +209,8 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
                 customScroll.toggle();
                 startRotateAnimation(view);
                 break;
+            //跳转至搜索界面
             case R.id.good_jumpToSeach:
-
                 startActivityForResult(new Intent(GoodFragment.this.getContext(), SearchActivity.class), StartActivityCode.GOOD_TO_SEARCH_CODE);
                 break;
         }
@@ -251,7 +249,6 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
         for (int i = 0; i < mCategorys.size(); i++) {
             mCategorys.get(i).setClick(false);
         }
-        //给指定的item设置点击效果
         mCategorys.get(position).setClick(true);
     }
 

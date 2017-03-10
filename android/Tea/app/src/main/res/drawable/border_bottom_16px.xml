@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--只要上下边框-->
+    <item>
+        <shape>
+            <!--下面stroke 的width有多少 这里就要负多少-->
+            <padding
+                android:bottom="0dp"
+                android:left="-8dp"
+                android:right="-8dp"
+                android:top="-8dp" />
+
+            <solid android:color="#00ff00ff" />
+        </shape>
+    </item>
+
+
+    <item>
+        <shape>
+
+            <corners android:radius="0dp" />
+
+            <stroke
+                android:width="8dp"
+                android:color="@color/bg_color_f4f4f4" />
+        </shape>
+    </item>
+
+</layer-list>
