@@ -1,4 +1,4 @@
-package com.gshl.tea.module.shopCar.activity;
+package com.gshl.tea.module.shopCar.fragment;
 
 import android.support.v7.widget.LinearLayoutManager;
 

@@ -146,6 +146,11 @@ public class RegexUtils {
     }
 
 
+    /**
+     * 判断密码的有效性
+     * @param input
+     * @return
+     */
     public static boolean isPassword(CharSequence input){
         String string = input.toString();
         char[] chars = string.toCharArray();
@@ -158,6 +163,36 @@ public class RegexUtils {
         return true;
     }
 
+
+    /**
+     * 判断手机号码 和 密码的有效性
+     * @param phone
+     * @param pass
+     * @return
+     */
+    public static boolean isValidByPhoneAndPass(String phone, String pass) {
+        //用户输入的手机号码
+        //用户输入的密码
+        if (RegexUtils.isMobileExact(phone)) {
+            if (StringUtils.length(pass) >= 6 && StringUtils.length(pass) <= 20) {
+                if (RegexUtils.isPassword(pass)) {
+                    //TODO 手机和密码合法 post提交注册
+//                    postRegister(phone, pass);
+                    return true;
+                }else {
+                    ToastUtils.showShortToast(Utils.getContext(),"密码含有非法字符，请重新输入！");
+                    return false;
+                }
+            }else {
+                ToastUtils.showShortToast(Utils.getContext(),"密码必须在6-20位之间，请重新输入！");
+                return false;
+
+            }
+        }else {
+            ToastUtils.showShortToast(Utils.getContext(),"不是有效的手机号码");
+            return false;
+        }
+    }
 
     /**
      * 获取正则匹配的部分

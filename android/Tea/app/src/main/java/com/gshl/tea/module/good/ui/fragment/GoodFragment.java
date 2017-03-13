@@ -6,10 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.gshl.tea.BR;
 import com.gshl.tea.R;
@@ -26,6 +24,7 @@ import com.gshl.tea.module.good.ui.activity.SearchActivity;
 import com.gshl.tea.module.good.utils.RequestNetUtils;
 import com.gshl.tea.module.good.widgets.CustomHorizontalScrollView;
 import com.gshl.tea.utils.AnimatorUtil;
+import com.gshl.tea.utils.RecyclerViewPoolUtils;
 import com.gshl.tea.utils.ToastUtils;
 
 import java.util.ArrayList;
@@ -51,6 +50,7 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
     private LinearLayout changeListStyle;
     //scrollView 的x轴的滑动值
     private int customScrollValue;
+    private CommonRVAdapter rightRvAdapter;
 
     @Override
     protected void init() {
@@ -67,18 +67,6 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
 
     }
 
-    private void initAdapter() {
-        bind.setRvManager(new GridLayoutManager(getActivity(), RecyclerViewProperty.GOOD_SPANS, GridLayoutManager.VERTICAL, false));
-        CommonRVAdapter rvAdapter = new CommonRVAdapter(mDataList, BR.good, R.layout.good_item_layout);
-        //监听所有商品的item的点击事件
-        rvAdapter.setOnItemClickListener(this);
-        bind.setGoodAdapter(rvAdapter);
-
-        bind.setRvManagerLinear(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-        bind.setCategoryAdapter(new CommonRVAdapter(mCategorys, BR.category,R.layout.category_item));
-    }
-
-
     private void initializeProperty() {
         bind = (GoodLayoutBinding) this.binding;
 
@@ -87,6 +75,26 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
         mDataList = new ArrayList<>();
         mCategorys = new ArrayList<>();
         mNormalGoods = new ArrayList<>();
+    }
+
+
+    private void initAdapter() {
+        GridLayoutManager manager = new GridLayoutManager(getActivity(), RecyclerViewProperty.GOOD_SPANS, GridLayoutManager.VERTICAL, false);
+        manager.setRecycleChildrenOnDetach(true);
+        bind.setRvManager(manager);
+        bind.goodRv.setHasFixedSize(true);
+        rightRvAdapter = new CommonRVAdapter(mDataList, BR.good, R.layout.good_item_layout);
+        //监听所有商品的item的点击事件
+        rightRvAdapter.setOnItemClickListener(this);
+        bind.setGoodAdapter(rightRvAdapter);
+        bind.goodRv.setRecycledViewPool(RecyclerViewPoolUtils.getInstance().getRecyclerViewPool());
+
+        LinearLayoutManager leftRvManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+        leftRvManager.setRecycleChildrenOnDetach(true);
+        bind.setRvManagerLinear(leftRvManager);
+        bind.categoryRv.setHasFixedSize(true);
+        bind.setCategoryAdapter(new CommonRVAdapter(mCategorys, BR.category,R.layout.category_item));
+        bind.categoryRv.setRecycledViewPool(RecyclerViewPoolUtils.getInstance().getRecyclerViewPool());
     }
 
     private void initCategorys() {
@@ -104,14 +112,14 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
 
     private void initView() {
         toggle = bind.toggleCategory;
-        categoryRv = bind.categoryId;
+        categoryRv = bind.categoryRv;
         customScroll = bind.customScroll;
         customScroll.setClickable(false);
         toggle.setTag(true);
         changeListStyle = bind.hideLayout.changeListStyle;
+
+        //设置商品列表默认为双向排列
         bind.hideLayout.changeListStyle.setTag(true);
-
-
     }
 
     /**
@@ -181,6 +189,7 @@ public class GoodFragment extends BaseFragment implements View.OnClickListener, 
             CommonRVAdapter doubleAdapter = new CommonRVAdapter(mNormalGoods, BR.normalGood,R.layout.normal_good_double_item);
             doubleAdapter.setOnItemClickListener(this);
             bind.setNormalRvAdapter(doubleAdapter);
+            Log.e("asfasdf", bind.goodRv.getScrollY() + "");
             changeListStyle.setTag(false);
         }else {
             bind.setHideRvManager(new GridLayoutManager(GoodFragment.this.getContext(),RecyclerViewProperty.GOOD_SPANS_SINGLE ,GridLayoutManager.VERTICAL,false));

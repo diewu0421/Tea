@@ -13,35 +13,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         android:orientation="vertical">
         <!--top start -->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/height_44dp"
-            android:fitsSystemWindows="true"
-            android:background="@color/bg_color_f4f4f4">
+            android:background="@color/color_ff6243">
 
-            <RelativeLayout
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:id="@+id/receive_goback"
-                >
-                <ImageView
-                    android:id="@+id/good_list_goback"
-                    android:layout_width="23dp"
-                    android:layout_height="23dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="@dimen/margin_left_5dp"
-                    android:background="@mipmap/btn_fangx"
-                    />
-            </RelativeLayout>
+            <ImageView
+                android:id="@+id/attachment_goback"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_5dp"
+                android:background="@mipmap/btn_fangx"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/receiving_address"
-                android:textColor="@color/color_191919"
+                android:text="@string/attachment_info"
+                android:textColor="@color/white"
                 android:textSize="@dimen/sp_17"
 
                 />
@@ -50,10 +44,21 @@
 
         <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             app:layoutManager="@{rvLinearManager}"
             app:adapter="@{rvAdapter}"
-            android:id="@+id/receive_rv"
+            android:padding="@dimen/padding_10dp"
             ></android.support.v7.widget.RecyclerView>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:gravity="center"
+            android:textSize="@dimen/sp_17"
+            android:textColor="@color/white"
+            android:background="@color/color_ff6243"
+            android:id="@+id/attach_submit"
+            android:text="@string/submit"/>
     </LinearLayout>
 </layout>

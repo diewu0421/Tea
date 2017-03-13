@@ -154,6 +154,7 @@
             android:layout_height="match_parent"
             android:background="@color/white"
             app:adapter="@{normalRvAdapter}"
+            android:id="@+id/good_hide_rv"
             app:layoutManager="@{hideRvManager}"></android.support.v7.widget.RecyclerView>
         <!--列表区域 结束-->
     </LinearLayout>

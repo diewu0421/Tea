@@ -1,12 +1,13 @@
 package com.gshl.tea.module.me.fragment;
 
 import android.content.Intent;
-import android.databinding.repacked.google.common.base.CaseFormat;
 import android.view.View;
 
 import com.gshl.tea.R;
 import com.gshl.tea.activity.BaseFragment;
 import com.gshl.tea.databinding.MeLayoutBinding;
+import com.gshl.tea.module.me.activity.BuyRecordActivity;
+import com.gshl.tea.module.me.activity.ReceivingAddressActivity;
 import com.gshl.tea.module.me.activity.UserManagerActivity;
 
 /**
@@ -48,23 +49,36 @@ public class MeFragment extends BaseFragment implements View.OnClickListener {
 
     private void initEvent() {
         bind.meUserManager.setOnClickListener(this);
-    }
-
-    @Override
-    protected int getLayoutId() {
-        return R.layout.me_layout;
+        bind.meBuyRecord.setOnClickListener(this);
+        bind.meManagerReceivingAddress.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+            //跳转至用户管理
             case R.id.me_user_manager:
                 jumpToUserManagerPage();
+                break;
+
+            //点击购买记录
+            case R.id.me_buy_record:
+                startActivity(new Intent(getActivity(), BuyRecordActivity.class));
+                break;
+
+            //跳转至管理收货地址页面
+            case R.id.me_manager_receiving_address:
+                startActivity(new Intent(getActivity(), ReceivingAddressActivity.class));
                 break;
         }
     }
 
     private void jumpToUserManagerPage() {
         startActivity(new Intent(getActivity(), UserManagerActivity.class));
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.me_layout;
     }
 }

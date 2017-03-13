@@ -2,6 +2,7 @@ package com.gshl.tea.adapter;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -100,12 +101,27 @@ public class CommonRVAdapter extends RecyclerView.Adapter<CommonRVAdapter.BaseHo
 
 
     /**
+     * 当数据更新，把数据插入到列表中
+     * @param list
+     */
+    public void notifyItemInsert(List list,int position) {
+        mDataList.addAll(list);
+        notifyItemInserted(position);
+
+//        for (int i = 0; i < list.size(); i++) {
+//            mDataList.add(list.get(i));
+//            notifyItemInserted(position);
+//        }
+    }
+
+
+    /**
      * 给view设置点击事件
      *
      * @param holder
      * @param position
      */
-    protected void setOnViewClick(ViewDataBinding holder, int position) {
+    protected void setOnViewClick(ViewDataBinding itemBinding, int position) {
 
     }
 

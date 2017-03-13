@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
+import com.gshl.tea.MyApp;
 import com.gshl.tea.R;
 import com.gshl.tea.utils.StatusBarCompat;
+import com.zhy.http.okhttp.OkHttpUtils;
 
 /**
  * Created by ZengLingWen on 2017/2/21.
@@ -38,4 +40,11 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected abstract int getLayoutId();
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (MyApp.getInstance() != null) {
+            OkHttpUtils.getInstance().cancelTag(MyApp.getInstance());
+        }
+    }
 }

@@ -11,14 +11,14 @@ public class RecyclerViewPoolUtils {
     private RecyclerView.RecycledViewPool pool;
 
     private RecyclerViewPoolUtils() {
-        if (pool != null) {
+        if (pool == null) {
             pool = new RecyclerView.RecycledViewPool();
         }
 
     }
     public static RecyclerViewPoolUtils getInstance() {
         if (instance == null) {
-            synchronized (AnimatorUtil.class) {
+            synchronized (RecyclerViewPoolUtils.class) {
                 if (instance == null) {
                     instance = new RecyclerViewPoolUtils();
                 }
@@ -28,9 +28,6 @@ public class RecyclerViewPoolUtils {
     }
 
     public RecyclerView.RecycledViewPool getRecyclerViewPool() {
-        if (pool != null) {
-            return this.pool;
-        }
-        return null;
+        return this.pool;
     }
 }

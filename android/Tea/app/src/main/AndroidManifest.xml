@@ -28,10 +28,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activity.RegisterActivity"
-                  android:configChanges="keyboardHidden|screenSize|orientation"
-                  android:theme="@style/FullScreenAnimation"
-                  android:windowSoftInputMode="adjustResize">
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:theme="@style/FullScreenAnimation"
+            android:windowSoftInputMode="adjustResize">
         </activity>
         <activity android:name=".activity.InputCodeActivity">
         </activity>
@@ -72,6 +73,14 @@
         <activity android:name=".module.me.activity.EditReceivingActivity">
         </activity>
         <activity android:name=".module.me.activity.AddReceivingActivity">
+        </activity>
+        <activity android:name=".module.me.activity.BuyRecordActivity">
+        </activity>
+        <activity android:name=".module.shopCar.activity.AttachmentActivity">
+        </activity>
+        <activity android:name=".activity.WelcomeActivity" android:theme="@style/ThemeBackground">
+
+
         </activity>
     </application>
 

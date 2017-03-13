@@ -6,16 +6,23 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.RadioGroup;
 
+import com.gshl.tea.MyApp;
 import com.gshl.tea.R;
+import com.gshl.tea.constant.RequestUrl;
 import com.gshl.tea.databinding.ActivityMainBinding;
 import com.gshl.tea.module.good.ui.fragment.GoodFragment;
 import com.gshl.tea.module.home.activity.HomeFragment;
 import com.gshl.tea.module.me.fragment.MeFragment;
 import com.gshl.tea.module.order.ui.fragment.OrderFragment;
-import com.gshl.tea.module.shopCar.activity.ShopCarFragment;
+import com.gshl.tea.module.shopCar.fragment.ShopCarFragment;
+import com.gshl.tea.utils.LogUtils;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.Call;
 
 
 public class MainActivity extends BaseActivity {
@@ -28,6 +35,24 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void init() {
+        OkHttpUtils
+                .get()
+                .tag(MyApp.getInstance())
+                .url(RequestUrl.BASE_URL + " /api/user/findCustomerMoney")
+                .addParams("customerId", 2 + "")
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        LogUtils.e("oerr = ");
+
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        LogUtils.e("result = " + response);
+                    }
+                });
         initProperty();
         //初始化为view
         initView();

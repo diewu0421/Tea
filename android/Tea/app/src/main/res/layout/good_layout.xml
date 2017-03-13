@@ -106,7 +106,7 @@
                 android:orientation="horizontal">
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/category_id"
+                    android:id="@+id/category_rv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:adapter="@{categoryAdapter}"
@@ -144,6 +144,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/white"
+                        android:id="@+id/good_rv"
                         app:adapter="@{goodAdapter}"
                         app:layoutManager="@{rvManager}"></android.support.v7.widget.RecyclerView>
                     <!--内容区域2 商品列表 end-->

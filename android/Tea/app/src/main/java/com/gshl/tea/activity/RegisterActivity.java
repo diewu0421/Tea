@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 
+import com.gshl.tea.MyApp;
 import com.gshl.tea.R;
 import com.gshl.tea.bean.RegisterInfo;
 import com.gshl.tea.constant.RequestUrl;
@@ -94,29 +95,34 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     };
 
     private void startRegister() {
-        //用户输入的手机号码
+//        //用户输入的手机号码
         phone = bind.registerPhoneEt.getText().toString();
-        //用户输入的密码
+//        //用户输入的密码
         pass = bind.registerPassEt.getText().toString();
-        if (RegexUtils.isMobileExact(phone)) {
-            if (StringUtils.length(pass) >= 6 && StringUtils.length(pass) <= 20) {
-                if (RegexUtils.isPassword(pass)) {
-                    //TODO 手机和密码合法 post提交注册
-                    postRegister(phone, pass);
-                }else {
-                    ToastUtils.showShortToast(RegisterActivity.this,"密码含有非法字符，请重新输入！");
-                }
-            }else {
-                ToastUtils.showShortToast(RegisterActivity.this,"密码必须在6-20位之间，请重新输入！");
-            }
-        }else {
-            ToastUtils.showShortToast(RegisterActivity.this,"不是有效的手机号码");
+//        if (RegexUtils.isMobileExact(phone)) {
+//            if (StringUtils.length(pass) >= 6 && StringUtils.length(pass) <= 20) {
+//                if (RegexUtils.isPassword(pass)) {
+//                    //TODO 手机和密码合法 post提交注册
+//                    postRegister(phone, pass);
+//                }else {
+//                    ToastUtils.showShortToast(RegisterActivity.this,"密码含有非法字符，请重新输入！");
+//                }
+//            }else {
+//                ToastUtils.showShortToast(RegisterActivity.this,"密码必须在6-20位之间，请重新输入！");
+//            }
+//        }else {
+//            ToastUtils.showShortToast(RegisterActivity.this,"不是有效的手机号码");
+//        }
+
+        if (RegexUtils.isValidByPhoneAndPass(phone, pass)) {
+            postRegister(phone,pass);
         }
     }
 
     private void postRegister(String phone, String pass) {
         OkHttpUtils
                 .post()
+                .tag(MyApp.getInstance())
                 .url(RequestUrl.BASE_URL + RequestUrl.REGISTER_URL)
                 .addParams("phone", phone)
                 .addParams("password", pass)

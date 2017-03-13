@@ -41,7 +41,7 @@
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="ThemeBackground" parent="Theme_ChenJinShi">
+    <style name="ThemeBackground" parent="AppThemeFullScreen">
         <item name="android:windowBackground">@color/color_ff6243</item>
     </style>
 

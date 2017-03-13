@@ -40,6 +40,15 @@ public class LoginInfo {
         this.msg = msg;
     }
 
+    @Override
+    public String toString() {
+        return "LoginInfo{" +
+                "code=" + code +
+                ", data=" + data +
+                ", msg='" + msg + '\'' +
+                '}';
+    }
+
     public static class DataBean {
         /**
          * user : {"createTime":1,"departmentId":1,"headImg":1,"id":2,"nickname":1,"password":"测试内容2353","phone":"测试内容cxtz","roleId":1,"state":1,"tagType":1,"targetId":1,"type":1}
@@ -162,6 +171,24 @@ public class LoginInfo {
 
             public void setTagType(int tagType) {
                 this.tagType = tagType;
+            }
+
+            @Override
+            public String toString() {
+                return "UserBean{" +
+                        "createTime=" + createTime +
+                        ", departmentId=" + departmentId +
+                        ", headImg=" + headImg +
+                        ", id=" + id +
+                        ", nickname=" + nickname +
+                        ", password='" + password + '\'' +
+                        ", phone='" + phone + '\'' +
+                        ", roleId=" + roleId +
+                        ", state=" + state +
+                        ", tagType=" + tagType +
+                        ", targetId=" + targetId +
+                        ", type=" + type +
+                        '}';
             }
 
             public int getTargetId() {

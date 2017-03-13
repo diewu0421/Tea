@@ -4,6 +4,7 @@ import android.app.Application;
 import android.graphics.Typeface;
 import com.gshl.tea.utils.CrashUtils;
 import com.gshl.tea.utils.LogUtils;
+import com.gshl.tea.utils.SPUtils;
 import com.gshl.tea.utils.Utils;
 import com.se7en.utils.DeviceUtils;
 import com.se7en.utils.SystemUtil;
@@ -32,6 +33,7 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        appContext = this;
         //初始化工具类
         initializeUtil();
         //初始化initDeviceTools.jar
@@ -71,6 +73,7 @@ public class MyApp extends Application {
         CrashUtils.getInstance().init();
         //初始化日志
         LogUtils.getBuilder().setLog2FileSwitch(false).setTag("ChaYueKe").setLogFilter('v').setLogSwitch(true).create();
+        new SPUtils(getResources().getString(R.string.app_name_en));
     }
 
     public void setTypeface() {
